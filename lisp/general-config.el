@@ -1,3 +1,6 @@
+;; default 
+;; (setq find-file-default emacs-root)
+
 ;; better i-search highlight
 (require 'ishl)
 
@@ -11,6 +14,6 @@
 (yas/load-directory "~/.emacs.d/site-lisp/snippets")
 
 ;; icicles
-;;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
-;;(require 'icicles)
+(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
+(require 'icicles)
 ;;(require 'icomplete+)

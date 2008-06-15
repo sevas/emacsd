@@ -44,3 +44,6 @@
 ;; disable sound
 ;(setq visible-bell t)
 (setq ring-bell-function (lambda () (message "*beep*")))
+
+;; window title
+(setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
