@@ -12,7 +12,7 @@
 (color-theme-initialize)
 ;(color-theme-dark-blue2)
 ;(color-theme-gnome2)
-(load-library "themes/ryan-color-theme")
+(load-library "themes/my-color-theme")
 (color-theme-ryan)
 
 ;; parenthesis matching
