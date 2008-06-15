@@ -161,9 +161,9 @@ the second for a 'normal' command, and the third for a multiline command.")
     ;; python-file is ever edited etc. but it means that `py-shell' works
     ;; without loading a python-file first. Obviously screwing around with
     ;; python-mode's variables like this is a mess, but well.
-    (require 'python-mode)
-    ;; turn on ansi colors for ipython and activate completion
-    (defun ipython-shell-hook ()
+  (require 'python-mode)
+  ;; turn on ansi colors for ipython and activate completion
+  (defun ipython-shell-hook ()
       ;; the following is to synchronize dir-changes
       (make-local-variable 'shell-dirstack)
       (setq shell-dirstack nil)

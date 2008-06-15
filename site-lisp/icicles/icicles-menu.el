@@ -1,0 +1,1 @@
+#REDIRECT [[alacarte.el]]
