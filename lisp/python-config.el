@@ -1,8 +1,8 @@
 ;; --- python
-;; (autoload 'python-mode "python-mode" "Python Mode." t)
-;; (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-;; (add-to-list 'interpreter-mode-alist '("python" . python-mode))
-;; (require 'python-mode)
+(autoload 'python-mode "python-mode" "Python Mode." t)
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+(require 'python-mode)
 
 ;; pymacs
 (require 'pymacs)
@@ -27,6 +27,26 @@
 ;; growable miniconsole for python backtraces
 (setq resize-mini-windows t
       max-mini-window-height .85)
+
+
+;; autocomplete (, [, {
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (define-key python-mode-map "\"" 'electric-pair)
+	    (define-key python-mode-map "\'" 'electric-pair)
+	    (define-key python-mode-map "(" 'electric-pair)
+	    (define-key python-mode-map "[" 'electric-pair)
+	    (define-key python-mode-map "{" 'electric-pair)))
+
+(defun electric-pair ()
+  "Insert character pair without sournding spaces"
+  (interactive)
+  (let (parens-require-spaces)
+    (insert-pair)))
+
+;; pdb
+(setq pdb-path 'C:/Python25/Lib/pdb.py
+      gud-pdb-command-name (symbol-name pdb-path))
 
 ;;flymake + pylint
 ;; (when (load "flymake" t)
