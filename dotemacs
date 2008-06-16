@@ -5,7 +5,7 @@
 
 (defvar emacs-root (if (or (eq system-type 'windows-nt)
 			   (eq system-type 'gnu/linux))
-			   "c:/Documents and Settings/sevas/" 
+			   "c:/Documents and Settings/Frederic/" 
 			   "/home/sevas/")
   "My home directory — the root of my personal emacs load-path.")
 
@@ -21,6 +21,8 @@
 (load-library "lisp-config")
 (load-library "general-config")
 
+;;(load-library "setup-cygwin")
+(require 'setup-cygwin)
 
 
 
