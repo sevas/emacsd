@@ -1,9 +1,9 @@
 (require 'cl)
 
-(defvar emacs-root (if (or (eq system-type 'windows-nt)
-			   (eq system-type 'gnu/linux))
+(defvar emacs-root (if (eq system-type 'windows-nt)
 		       (concat "c:/Documents and Settings/" user-login-name "/Application Data/")
-		     (concat "/home/" user-login-name))
+		     (if (eq system-type 'gnu/linux)
+			 (concat "/home/" user-login-name "/")))
   "My home directory — the root of my personal emacs load-path.")
 
 (labels ((add-path (p)
@@ -13,14 +13,17 @@
   (add-path ".emacs.d/site-lisp") ;; elisp stuff I find on the 'net
   )
 
+(if (eq system-type 'windows-nt)
+    (load-library "w32-setup")
+  (if (eq system-type 'gnu/linux)
+      (load-library "linux-setup")))
+
+
+
 (load-library "visual-config")
 (load-library "python-config")
 (load-library "lisp-config")
 (load-library "general-config")
-
-;;(load-library "setup-cygwin")
-;(require 'setup-cygwin)
-
 
 
 

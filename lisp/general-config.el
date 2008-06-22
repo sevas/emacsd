@@ -14,8 +14,8 @@
 (yas/load-directory "~/.emacs.d/site-lisp/snippets")
 
 ;; icicles
-(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
-(require 'icicles)
+;;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
+;;(require 'icicles)
 ;;(eval-after-load "icomplete" '(progn (require 'icomplete+)))
 ;;(require 'icomplete)
 ;;(require 'icomplete+)

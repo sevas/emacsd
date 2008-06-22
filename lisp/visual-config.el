@@ -3,14 +3,18 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+;; ;; color theme
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(load-library "themes/my-color-theme")
+;;(my-color-theme)
+
+;; select font
+;;(set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
+;;(set-default-font "Consolas-10")
+
 ;; highlight selection
 (transient-mark-mode t) 
-
-;; color theme
-(require 'color-theme)
-(color-theme-initialize)
-(load-library "themes/my-color-theme")
-(my-color-theme)
 
 ;; parenthesis matching
 (show-paren-mode 1)
@@ -24,8 +28,6 @@
 ;; compilation console
 (setq compilation-window-height 10) 
 
-;; select font
-(set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
 
 ;; buffer switch with C-tab
 (global-set-key [(control tab)] `other-window) 
