@@ -1,20 +1,20 @@
-;; ;; color theme
-;;(require 'color-theme)
-;;(color-theme-initialize)
-;;(load-library "themes/my-color-theme")
-;;(my-color-theme)
+;; color theme
+(require 'color-theme)
+(color-theme-initialize)
+(load-library "themes/my-color-theme")
+(my-color-theme)
 
-;; select font
-;;(set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
+;;select font
+(set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
 ;;(set-default-font "Consolas-10")
 
 
 ;; icicles
-;;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
-;;(require 'icicles)
-;;(eval-after-load "icomplete" '(progn (require 'icomplete+)))
-;;(require 'icomplete)
-;;(require 'icomplete+)
+(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
+(require 'icicles)
+(eval-after-load "icomplete" '(progn (require 'icomplete+)))
+(require 'icomplete)
+(require 'icomplete+)
 
 
 ;; cygwin
