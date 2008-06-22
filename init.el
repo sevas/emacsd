@@ -1,12 +1,9 @@
-;;(normal-top-level-add-subdirs-to-load-path)
-;;(add-to-list 'load-path "~/.emacs.d")
-
 (require 'cl)
 
 (defvar emacs-root (if (or (eq system-type 'windows-nt)
 			   (eq system-type 'gnu/linux))
 		       (concat "c:/Documents and Settings/" user-login-name "/Application Data/")
-		     ("/home/" user-login-name))
+		     (concat "/home/" user-login-name))
   "My home directory — the root of my personal emacs load-path.")
 
 (labels ((add-path (p)
@@ -22,7 +19,7 @@
 (load-library "general-config")
 
 ;;(load-library "setup-cygwin")
-(require 'setup-cygwin)
+;(require 'setup-cygwin)
 
 
 

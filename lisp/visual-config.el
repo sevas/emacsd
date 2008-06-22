@@ -1,4 +1,3 @@
-;; --- general
 ;; UI
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -10,10 +9,8 @@
 ;; color theme
 (require 'color-theme)
 (color-theme-initialize)
-;(color-theme-dark-blue2)
-;(color-theme-gnome2)
 (load-library "themes/my-color-theme")
-(color-theme-ryan)
+(my-color-theme)
 
 ;; parenthesis matching
 (show-paren-mode 1)

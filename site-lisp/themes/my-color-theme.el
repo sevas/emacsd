@@ -1,9 +1,9 @@
 (eval-when-compile    (require 'color-theme))
-(defun color-theme-ryan ()
-  "Color theme by ryan, created 2007-04-19."
+(defun my-color-theme ()
+  "My color theme, based on Ryan McGuire's"
   (interactive)
   (color-theme-install
-   '(color-theme-ryan
+   '(my-color-theme
      ((background-color . "gray7")
       (background-mode . dark)
       (background-toolbar-color . "#cf3ccf3ccf3c")
@@ -263,7 +263,8 @@
      (eshell-ls-text-face ((t (:foreground "medium aquamarine"))))
      (eshell-ls-todo-face ((t (:bold t :foreground "aquamarine" :weight bold))))
      (eshell-ls-unreadable-face ((t (:foreground "DarkGrey"))))
-     (eshell-prompt-face ((t (:bold t :foreground "Pink" :weight bold))))
+     (eshell-prompt-face ((t (:bold t :foreground "Green" :weight bold))))
+     (eshell-prompt ((t (:bold t :foreground "MediumPurple1" :weight bold))))
      (eshell-test-failed-face ((t (:bold t :foreground "OrangeRed" :weight bold))))
      (eshell-test-ok-face ((t (:bold t :foreground "Green" :weight bold))))
      (excerpt ((t (nil))))
