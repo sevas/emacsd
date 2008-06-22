@@ -1,8 +1,12 @@
 ;; default 
 ;; (setq find-file-default emacs-root)
 
+;; autocomplete (, {, [
+(require 'pair-mode)
+
 ;; better i-search highlight
 (require 'ishl)
+
 
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))

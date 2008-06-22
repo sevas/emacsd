@@ -29,20 +29,20 @@
       max-mini-window-height .85)
 
 
-;; autocomplete (, [, {
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (define-key python-mode-map "\"" 'electric-pair)
-	    (define-key python-mode-map "\'" 'electric-pair)
-	    (define-key python-mode-map "(" 'electric-pair)
-	    (define-key python-mode-map "[" 'electric-pair)
-	    (define-key python-mode-map "{" 'electric-pair)))
+;; ;; autocomplete (, [, {
+;; (add-hook 'python-mode-hook
+;; 	  (lambda ()
+;; 	    (define-key python-mode-map "\"" 'electric-pair)
+;; 	    (define-key python-mode-map "\'" 'electric-pair)
+;; 	    (define-key python-mode-map "(" 'electric-pair)
+;; 	    (define-key python-mode-map "[" 'electric-pair)
+;; 	    (define-key python-mode-map "{" 'electric-pair)))
 
-(defun electric-pair ()
-  "Insert character pair without sournding spaces"
-  (interactive)
-  (let (parens-require-spaces)
-    (insert-pair)))
+;; (defun electric-pair ()
+;;   "Insert character pair without sournding spaces"
+;;   (interactive)
+;;   (let (parens-require-spaces)
+;;     (insert-pair)))
 
 ;; pdb
 (setq pdb-path '/usr/lib/python25/pdb.py
