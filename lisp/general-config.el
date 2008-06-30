@@ -3,6 +3,7 @@
 
 ;; autocomplete (, {, [
 (require 'pair-mode)
+(pair-mode)
 
 ;; better i-search highlight
 (require 'ishl)
