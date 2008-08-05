@@ -17,18 +17,18 @@
 
 
 ;; system dependent configuration
-(if (eq system-type 'windows-nt)
+(if (eq system-type "windows-nt")
     (load-library 'w32-setup)
   (if (eq system-type 'gnu/linux)
-      (load-library 'linux-setup)))
+      (load-library "linux-setup")))
 
 ;; some global configuration
 (load-library "visual-config")
 (load-library "general-config")
 (load-library "python-config")
 (load-library "lisp-config")
-
-
+(load-library "cc-config")
+(load-library "twit")
 
 
 ;;--------------------
