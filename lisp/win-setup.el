@@ -1,8 +1,11 @@
 ;; color theme
 (require 'color-theme)
 (color-theme-initialize)
-(load-library "themes/my-color-theme")
-(my-color-theme)
+;;(load-library "themes/my-color-theme")
+;;(my-color-theme)
+
+(load-library "themes/vivid-chalk")
+(color-theme-vivid-chalk)
 
 ;;select font
 (set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
