@@ -1,8 +1,8 @@
 (defun color-theme-vibrant-ink ()
-  "Based on Vivid Chalk, a vim port of Vibrant Ink."
+  "Modified from Vivid Chalk, a vim port of Vibrant Ink."
   (interactive)
   (color-theme-install
-   '(color-theme-vivid-chalk
+   '(color-theme-vibrant-ink
      ((background-color . "#090909")
       (background-mode . dark)
       (border-color . "black")

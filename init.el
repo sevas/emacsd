@@ -17,8 +17,8 @@
 
 
 ;; system dependent configuration
-(if (eq system-type "windows-nt")
-    (load-library 'w32-setup)
+(if (eq system-type 'windows-nt)
+    (load-library "w32-setup")
   (if (eq system-type 'gnu/linux)
       (load-library "linux-setup")))
 
