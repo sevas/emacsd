@@ -6,7 +6,6 @@
 
 ;;select font
 (set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
-;;(set-default-font "Consolas-10")
 
 
 ;; icicles

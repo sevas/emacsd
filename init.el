@@ -1,30 +1,34 @@
 (require 'cl)
 
+
 (defvar emacs-root (if (eq system-type 'windows-nt)
 		       (concat "c:/Documents and Settings/" user-login-name "/Application Data/")
 		     (if (eq system-type 'gnu/linux)
 			 (concat "/home/" user-login-name "/")))
   "My home directory — the root of my personal emacs load-path.")
 
+
 (labels ((add-path (p)
-	 (add-to-list 'load-path
-			(concat emacs-root p))))
-  (add-path ".emacs.d/lisp") ;; all my personal elisp code
-  (add-path ".emacs.d/site-lisp") ;; elisp stuff I find on the 'net
+		   (add-to-list 'load-path
+				(concat emacs-root p))))
+  (add-path ".emacs.d/lisp") ;; personnal elisp code
+  (add-path ".emacs.d/site-lisp") ;; elisp from the interwub
   )
 
-(if (eq system-type 'windows-nt)
-    (load-library "w32-setup")
+
+;; system dependent configuration
+(if (eq system-type "windows-nt")
+    (load-library 'w32-setup)
   (if (eq system-type 'gnu/linux)
       (load-library "linux-setup")))
 
-
-
+;; some global configuration
 (load-library "visual-config")
+(load-library "general-config")
 (load-library "python-config")
 (load-library "lisp-config")
-(load-library "general-config")
-
+(load-library "cc-config")
+(load-library "twit")
 
 
 ;;--------------------

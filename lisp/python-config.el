@@ -15,6 +15,7 @@
 ;; ;;  '(add-to-list 'pymacs-load-path YOUR-PYMACS-DIRECTORY"))
 (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport t)
+(ropemacs-mode)
 
 ;; ;; python failed tab completion
 ;; (require 'pycomplete)
@@ -29,20 +30,6 @@
       max-mini-window-height .85)
 
 
-;; ;; autocomplete (, [, {
-;; (add-hook 'python-mode-hook
-;; 	  (lambda ()
-;; 	    (define-key python-mode-map "\"" 'electric-pair)
-;; 	    (define-key python-mode-map "\'" 'electric-pair)
-;; 	    (define-key python-mode-map "(" 'electric-pair)
-;; 	    (define-key python-mode-map "[" 'electric-pair)
-;; 	    (define-key python-mode-map "{" 'electric-pair)))
-
-;; (defun electric-pair ()
-;;   "Insert character pair without sournding spaces"
-;;   (interactive)
-;;   (let (parens-require-spaces)
-;;     (insert-pair)))
 
 ;; pdb
 (setq pdb-path '/usr/lib/python25/pdb.py
