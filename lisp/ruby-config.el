@@ -1,5 +1,3 @@
-
-(require 'pabbrev)
 (require 'ruby-mode)
 (require 'ruby-electric)
 
@@ -11,7 +9,6 @@
 (defun my-ruby-mode-hook ()
 ;;  (font-lock-mode t)
   (setq standard-indent 4)
-  (pabbrev-mode t)
   (ruby-electric-mode t))
 ;;  (define-key ruby-mode-map "\C-c\C-a" 'ruby-eval-buffer))
 
