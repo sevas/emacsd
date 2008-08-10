@@ -3,7 +3,7 @@
   (interactive)
   (color-theme-install
    '(color-theme-vibrant-ink
-     ((background-color . "#090909")
+     ((background-color . "#111111")
       ;;(background-color . "#090909")
       (background-mode . dark)
       (border-color . "black")
