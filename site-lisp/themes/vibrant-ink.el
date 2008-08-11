@@ -3,7 +3,7 @@
   (interactive)
   (color-theme-install
    '(color-theme-vibrant-ink
-     ((background-color . "#090909")
+     ((background-color . "#111111")
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "white")
@@ -47,4 +47,9 @@
      (flymake-warnline ((t (:background "LightSteelBlue" :foreground
 "black"))))
      (underline ((t (:underline t))))
-     (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))))) 
+     (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
+     (twit-message-face ((default (:family "sans"  :height 1.0))))
+     (twit-info-face ((t (:foreground "CornflowerBlue"))))
+     (twit-title-face ((t  (:background "Cyan4"))))
+     (twit-zebra-1-face ((t (:background "MidnightBlue"))))
+     (twit-zebra-2-face ((t (:background "DarkSlateBlue"))))))) 
