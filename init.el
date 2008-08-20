@@ -1,6 +1,5 @@
 (require 'cl)
 
-
 (defvar emacs-root (if (eq system-type 'windows-nt)
 		       (concat "c:/Documents and Settings/" user-login-name "/Application Data/")
 		     (if (eq system-type 'gnu/linux)
@@ -24,12 +23,15 @@
 
 ;; some global configuration
 (load-library "visual-config")
-(load-library "general-config")
+
+;; progmodes
 (load-library "python-config")
 (load-library "ruby-config")
 (load-library "lisp-config")
 (load-library "cc-config")
-(load-library "twit")
+
+;; other extentions & helper functions
+(load-library "general-config")
 
 
 ;;--------------------
