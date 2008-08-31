@@ -31,8 +31,15 @@
 (setq line-number-mode t) 
 
 ;; disable sound
-;(setq visible-bell t)
-(setq ring-bell-function (lambda () (message "*beep*")))
+;; (setq visible-bell t)
+;(setq ring-bell-function (lambda () (message "*beep*")))
+
+;; (setq ring-bell-function 
+;;       (lambda ()
+;; 	(unless (memq this-command
+;; 		      '(isearch-abort abort-recursive-edit exit-minibuffer keyboard-quit))
+;; 	  (ding))))
+
 
 ;; window title
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))

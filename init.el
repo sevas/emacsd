@@ -1,6 +1,5 @@
 (require 'cl)
 
-
 (defvar emacs-root (if (eq system-type 'windows-nt)
 		       (concat "c:/Documents and Settings/" user-login-name "/Application Data/")
 		     (if (eq system-type 'gnu/linux)
@@ -13,7 +12,7 @@
 				(concat emacs-root p))))
   (add-path ".emacs.d/lisp") ;; personnal elisp code
   (add-path ".emacs.d/site-lisp") ;; elisp from the interwub
-  )
+  (add-path ".emacs.d/site-lisp/haskell-mode-2.4"))
 
 
 ;; system dependent configuration
@@ -24,12 +23,16 @@
 
 ;; some global configuration
 (load-library "visual-config")
-(load-library "general-config")
+
+;; progmodes
 (load-library "python-config")
 (load-library "ruby-config")
 (load-library "lisp-config")
 (load-library "cc-config")
-(load-library "twit")
+(load-library "haskell-config")
+
+;; other extentions & helper functions
+(load-library "general-config")
 
 
 ;;--------------------
