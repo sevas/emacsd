@@ -12,7 +12,7 @@
 				(concat emacs-root p))))
   (add-path ".emacs.d/lisp") ;; personnal elisp code
   (add-path ".emacs.d/site-lisp") ;; elisp from the interwub
-  )
+  (add-path ".emacs.d/site-lisp/haskell-mode-2.4"))
 
 
 ;; system dependent configuration
@@ -29,6 +29,7 @@
 (load-library "ruby-config")
 (load-library "lisp-config")
 (load-library "cc-config")
+(load-library "haskell-config")
 
 ;; other extentions & helper functions
 (load-library "general-config")
