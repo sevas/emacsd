@@ -9,8 +9,10 @@
 (require 'ishl)
 
 ;; pabbrev
+(abbrev-mode (not t))
 (require 'pabbrev)
 (pabbrev-mode t)
+
 
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
@@ -23,11 +25,17 @@
 
 
 ;; functions
-;Reload .emacs on the fly                                                                                                    
-(defun reload-dot-emacs()                                                                                                    
-  (interactive)                                                                                                              
-  (if(bufferp (get-file-buffer "init.el"))                                                                                    
-      (save-buffer(get-buffer "init.el")))                                                                                    
-  (load-file "~/.emacs.d/init.el")                                                                                                     
+;Reload .emacs on the fly
+(defun reload-dot-emacs()
+  (interactive)
+  (if(bufferp (get-file-buffer "init.el"))
+      (save-buffer(get-buffer "init.el")))
+  (load-file "~/.emacs.d/init.el")
   (message ".emacs reloaded successfully"))
 
+
+(defun toggle-abbrev-pabbrev()
+  (interactive)
+  (abbrev-mode)
+  (pabbrev-mode)
+  (message "abbrev mode toggled"))

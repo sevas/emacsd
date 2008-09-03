@@ -24,13 +24,12 @@
 
 ;; some global configuration
 (load-library "visual-config")
-(load-library "general-config")
 (load-library "python-config")
 (load-library "ruby-config")
 (load-library "lisp-config")
 (load-library "cc-config")
 (load-library "twit")
-
+(load-library "general-config")
 
 ;;--------------------
 ;(require 'w3m-load)
