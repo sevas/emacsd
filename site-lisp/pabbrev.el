@@ -36,6 +36,7 @@
 ;; Predictive abbreviation expansion works based on the previously
 ;; written text.  Unlike dynamic abbreviation, the text is analysed
 ;; during idle time, while Emacs is doing nothing else.  `pabbrev-mode'
+
 ;; tells you when this is happening.  If this irritates you unset
 ;; `pabbrev-idle-timer-verbose'.  The advantage of this is that its
 ;; very quick to look up potential abbreviations, which means that the
