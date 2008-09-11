@@ -48,6 +48,7 @@
 "black"))))
      (underline ((t (:underline t))))
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
+     (eshell-prompt ((t (:bold t :foreground "#9933cc"))))
      (twit-message-face ((default (:family "sans"  :height 1.0))))
      (twit-info-face ((t (:foreground "CornflowerBlue"))))
      (twit-title-face ((t  (:background "Cyan4"))))

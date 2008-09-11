@@ -34,6 +34,8 @@
 ;; other extentions & helper functions
 (load-library "general-config")
 
+(autoload 'typing-of-emacs "The typing of emacs" t)
+
 ;;--------------------
 ;(require 'w3m-load)
 ;(require 'ipython)
