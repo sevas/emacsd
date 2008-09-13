@@ -1,7 +1,7 @@
 (require 'cl)
 
 (defvar emacs-root (if (eq system-type 'windows-nt)
-		       (concat "c:/Documents and Settings/" user-login-name "/Application Data/")
+		       (concat (getenv "APPDATA") "/")
 		     (if (eq system-type 'gnu/linux)
 			 (concat "/home/" user-login-name "/")))
   "My home directory — the root of my personal emacs load-path.")
@@ -34,6 +34,7 @@
 ;; other extentions & helper functions
 (load-library "general-config")
 
+(autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
 ;;--------------------
 ;(require 'w3m-load)

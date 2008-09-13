@@ -37,7 +37,7 @@
 "black"))))
      (modeline-mousable-minor-mode ((t (:background
 "#a5baf1" :foreground "black"))))
-     (region ((t (:background "#555577"))))
+     (region ((t (:background "#222244"))))
      (primary-selection ((t (:background "#555577"))))
      (isearch ((t (:background "#555555"))))
      (zmacs-region ((t (:background "#555577"))))
@@ -48,6 +48,7 @@
 "black"))))
      (underline ((t (:underline t))))
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
+     (eshell-prompt ((t (:bold :foreground "#9933cc"))))
      (twit-message-face ((default (:family "sans"  :height 1.0))))
      (twit-info-face ((t (:foreground "CornflowerBlue"))))
      (twit-title-face ((t  (:background "Cyan4"))))

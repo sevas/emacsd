@@ -14,7 +14,7 @@
 ;	  'pabbrev-mode)
 (global-pabbrev-mode t)
 
-;(pabbrev-mode t)
+(windmove-default-keybindings)
 
 ;; (defun my-abbrev-hook()
 ;;   (abbrev-mode)
