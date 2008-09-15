@@ -767,7 +767,7 @@ Currently-active file is at the head of the list.")
   (modify-syntax-entry ?. "_" py-dotted-expression-syntax-table))
 
 
-
+
 ;; Utilities
 (defmacro py-safe (&rest body)
   "Safely execute BODY, return nil if an error occurred."
