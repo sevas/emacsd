@@ -1,9 +1,9 @@
-(defun color-theme-vibrant-ink ()
+(defun color-theme-vibrant-ink-linux ()
   "Modified from Vivid Chalk, a vim port of Vibrant Ink."
   (interactive)
   (color-theme-install
-   '(color-theme-vibrant-ink
-     ((background-color . "#111111")
+   '(color-theme-vibrant-ink-linux
+     ((background-color . "#000000")
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "white")
