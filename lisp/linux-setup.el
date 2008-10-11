@@ -3,8 +3,8 @@
 (color-theme-initialize)
 ;;(load-library "themes/my-color-theme")
 ;;(my-color-theme)
-(load-library "themes/vibrant-ink")
-(color-theme-vibrant-ink)
+(load-library "themes/vibrant-ink-linux")
+(color-theme-vibrant-ink-linux)
 
 ;;select font
 (set-default-font "Consolas-10")
