@@ -15,6 +15,7 @@
 	          (setq ls (cons (* width counter) ls))
 		        (setq counter (1+ counter)))
 	      (set (make-local-variable 'tab-stop-list) (nreverse ls))))
+
 (defun my-c-mode-common-hook ()
   (setq tab-width 4) 
   (my-build-tab-stop-list tab-width)
@@ -23,13 +24,12 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 
-
 ;; build command
-(global-set-key [(f9)] 'compile)
+(global-set-key [(f6)] 'compile)
 
 
 ;;compilation window
-(setq compilation-window-height 8)
+(setq compilation-window-height 10)
 (setq compilation-finish-function
       (lambda (buf str)
 	(if (string-match "exited abnormally" str)

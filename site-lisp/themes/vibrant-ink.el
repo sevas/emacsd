@@ -3,8 +3,7 @@
   (interactive)
   (color-theme-install
    '(color-theme-vibrant-ink
-     ((background-color . "#111111")
-      ;;(background-color . "#090909")
+     ((background-color . "#000000")
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "white")
@@ -32,21 +31,16 @@
      (highlight ((t (:background "darkolivegreen"))))
      (italic ((t (:italic t))))
      (modeline ((t (:background "#a5baf1" :foreground "black"))))
-     (modeline-buffer-id ((t (:background "#a5baf1" :foreground
-"black"))))
-     (modeline-mousable ((t (:background "#a5baf1" :foreground
-"black"))))
-     (modeline-mousable-minor-mode ((t (:background
-"#a5baf1" :foreground "black"))))
-     (region ((t (:background "#555577"))))
-     (primary-selection ((t (:background "#555577"))))
+     (modeline-buffer-id ((t (:background "#a5baf1" :foreground "black"))))
+     (modeline-mousable ((t (:background "#a5baf1" :foreground "black"))))
+     (modeline-mousable-minor-mode ((t (:background "#a5baf1" :foreground "black"))))
+     (region ((t (:background "#222244"))))
+     (primary-selection ((t (:background "#333355"))))
      (isearch ((t (:background "#555555"))))
      (zmacs-region ((t (:background "#555577"))))
      (secondary-selection ((t (:background "darkslateblue"))))
-     (flymake-errline ((t (:background "LightSalmon" :foreground
-"black"))))
-     (flymake-warnline ((t (:background "LightSteelBlue" :foreground
-"black"))))
+     (flymake-errline ((t (:background "LightSalmon" :foreground "black"))))
+     (flymake-warnline ((t (:background "LightSteelBlue" :foreground "black"))))
      (underline ((t (:underline t))))
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
      (eshell-prompt ((t (:foreground "#9933cc"))))

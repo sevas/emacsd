@@ -10,8 +10,6 @@
 
 ;; pabbrev
 (require 'pabbrev)
-;(add-hook 'after-change-major-mode-hook
-;	  'pabbrev-mode)
 (global-pabbrev-mode t)
 
 ;(pabbrev-mode t)
@@ -31,7 +29,7 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/site-lisp/snippets")
 
-
+(windmove-default-keybindings)
 
 ;; twitter mode
 (require  'twit)
@@ -40,6 +38,11 @@
 ;; column editing
 (require 'cua-base)
 (cua-mode)
+
+;; line numbering
+(require 'setnu)
+(add-hook 'text-mode-hook 'turn-on-setnu-mode)
+
 
 ;; functions
 ;Reload .emacs on the fly                                                                                                    
