@@ -26,7 +26,7 @@
 ;; (require 'ryan-pycomplete)
 
 ;; ipython 
-(setq ipython-command "ipython")
+(setq ipython-command "/usr/bin/ipython")
 (require 'ipython)
 
 ;; growable miniconsole for python backtraces
@@ -34,20 +34,19 @@
       max-mini-window-height .85)
 
 
-
 ;; pdb
-(setq pdb-path '/usr/lib/python25/pdb.py
+(setq pdb-path '/usr/lib/python2.5/pdb.py
       gud-pdb-command-name (symbol-name pdb-path))
 
 ;; ;;flymake + pylint
-(when (load "flymake" t)
-  (defun flymake-pylint-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-		       'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-      (list "~/bin/epylint.py" (list local-file))))
+;; (when (load "flymake" t)
+;;   (defun flymake-pylint-init ()
+;;     (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;; 		       'flymake-create-temp-inplace))
+;;            (local-file (file-relative-name
+;;                         temp-file
+;;                         (file-name-directory buffer-file-name))))
+;;       (list "~/bin/epylint.py" (list local-file))))
   
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pylint-init)))
+;;   (add-to-list 'flymake-allowed-file-name-masks
+;;                '("\\.py\\'" flymake-pylint-init)))
