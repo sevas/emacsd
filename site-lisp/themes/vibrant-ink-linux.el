@@ -13,7 +13,7 @@
      (default ((t (nil))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
-     (fringe ((t (:background "black"))))
+     (fringe ((t (:background "222244"))))
      (font-lock-builtin-face ((t (:foreground "#CCCC33"))))
      (font-lock-comment-face ((t (:italic t :foreground "#9933cc"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#9933cc"))))

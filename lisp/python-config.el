@@ -27,7 +27,10 @@
 
 ;; ipython 
 (setq ipython-command "/usr/bin/ipython")
+;;(custom-set-variables '(frame-background-mode 'dark))
+(setq frame-background-mode 'dark)
 (require 'ipython)
+
 
 ;; growable miniconsole for python backtraces
 (setq resize-mini-windows t
@@ -37,6 +40,13 @@
 ;; pdb
 (setq pdb-path '/usr/lib/python2.5/pdb.py
       gud-pdb-command-name (symbol-name pdb-path))
+
+(defadvice pdb (before gud-query-cmdline activate)
+  "Provide a better default command line when called interactively."
+  (interactive
+   (list
+    (gud-query-cmdline pdb-path
+		       (file-name-nondirectory buffer-file-name))))) 
 
 ;; ;;flymake + pylint
 ;; (when (load "flymake" t)
