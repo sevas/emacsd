@@ -37,7 +37,7 @@
 "black"))))
      (modeline-mousable-minor-mode ((t (:background
 "#a5baf1" :foreground "black"))))
-     (region ((t (:background "#333355"))))
+     (region ((t (:background "#444466"))))
      (primary-selection ((t (:background "#555577"))))
      (isearch ((t (:background "#555555"))))
      (zmacs-region ((t (:background "#555577"))))

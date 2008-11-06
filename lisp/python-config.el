@@ -35,8 +35,14 @@
 
 
 ;; pdb
-(setq pdb-path '/usr/lib/python2.5/pdb.py
+(setq pdb-path 'pdb.bat'
       gud-pdb-command-name (symbol-name pdb-path))
+
+
+(defvar gud-pdb-marker-regexp "^>
+\\([-a-zA-Z0-9_/.:\\]*\\|<string>\\)(\\([0-9]+\\))\\([a-zA-Z0-9_]*\\|\\?\\)()\\(->[^\n]*\\)?\n")
+
+
 
 ;; ;;flymake + pylint
 ;; (when (load "flymake" t)
