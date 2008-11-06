@@ -43,6 +43,11 @@
 (require 'cua-base)
 (cua-mode)
 
+;; highlight-current-line
+(require 'highlight-current-line)
+(highlight-current-line-set-bg-color "#351035")
+
+
 ;; functions
 ;Reload .emacs on the fly
 (defun reload-dot-emacs()
