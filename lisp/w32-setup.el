@@ -3,8 +3,8 @@
 (color-theme-initialize)
 ;;(load-library "themes/my-color-theme")
 ;;(my-color-theme)
-(load-library "themes/vibrant-ink")
-(color-theme-vibrant-ink)
+(load-library "themes/vibrant-ink-win")
+(color-theme-vibrant-ink-win)
 
 ;;select font
 (set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")

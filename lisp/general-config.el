@@ -11,8 +11,6 @@
 ;; pabbrev
 (abbrev-mode (not t))
 (require 'pabbrev)
-;(add-hook 'after-change-major-mode-hook
-;	  'pabbrev-mode)
 (global-pabbrev-mode t)
 
 (windmove-default-keybindings)
@@ -33,7 +31,7 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/site-lisp/snippets")
 
-
+(windmove-default-keybindings)
 
 ;; twitter mode
 (require  'twit)
