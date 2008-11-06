@@ -45,8 +45,11 @@
 
 ;; highlight-current-line
 (require 'highlight-current-line)
-(highlight-current-line-set-bg-color "#351035")
+(highlight-current-line-set-bg-color "#202020")
 
+
+;; xml-mode for ogre .scene file
+(add-to-list 'auto-mode-alist '("\\.scene\\'" . xml-mode ))
 
 ;; functions
 ;Reload .emacs on the fly
