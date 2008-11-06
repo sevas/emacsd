@@ -6,7 +6,7 @@
      ((background-color . "#111111")
       (background-mode . dark)
       (border-color . "black")
-      (cursor-color . "white")
+      (cursor-color . "#9933cc")
       (foreground-color . "#DDDDDB")
       (list-matching-lines-face . bold)
       (view-highlight-face . highlight))
@@ -39,7 +39,7 @@
 "#a5baf1" :foreground "black"))))
      (region ((t (:background "#222244"))))
      (primary-selection ((t (:background "#555577"))))
-     (isearch ((t (:background "#555555"))))
+     (isearch ((t (:background "#AA2288"))))
      (zmacs-region ((t (:background "#555577"))))
      (secondary-selection ((t (:background "darkslateblue"))))
      (flymake-errline ((t (:background "LightSalmon" :foreground
