@@ -44,6 +44,7 @@
 ;; highlight-current-line
 (require 'highlight-current-line)
 (highlight-current-line-set-bg-color "#202020")
+;;(highlight-current-line-minor-mode t)
 
 
 ;; xml-mode for ogre .scene file

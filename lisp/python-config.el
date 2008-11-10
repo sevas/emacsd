@@ -26,8 +26,8 @@
 ;; (require 'ryan-pycomplete)
 
 ;; ipython 
-(setq ipython-command "/usr/bin/ipython")
-(require 'ipython)
+;;(setq ipython-command "/usr/bin/ipython")
+;;(require 'ipython)
 
 ;; growable miniconsole for python backtraces
 (setq resize-mini-windows t
@@ -35,12 +35,12 @@
 
 
 ;; pdb
-(setq pdb-path 'pdb.bat'
-      gud-pdb-command-name (symbol-name pdb-path))
+;;(setq pdb-path 'pdb.bat'
+;;      gud-pdb-command-name (symbol-name pdb-path))
 
 
-(defvar gud-pdb-marker-regexp "^>
-\\([-a-zA-Z0-9_/.:\\]*\\|<string>\\)(\\([0-9]+\\))\\([a-zA-Z0-9_]*\\|\\?\\)()\\(->[^\n]*\\)?\n")
+;;(defvar gud-pdb-marker-regexp "^>
+;;\\([-a-zA-Z0-9_/.:\\]*\\|<string>\\)(\\([0-9]+\\))\\([a-zA-Z0-9_]*\\|\\?\\)()\\(->[^\n]*\\)?\n")
 
 
 
