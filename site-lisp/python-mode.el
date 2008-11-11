@@ -82,7 +82,6 @@
 (require 'compile)
 (require 'ansi-color)
 
-
 ;; user definable variables
 ;; vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
@@ -370,7 +369,7 @@ to select the appropriate python interpreter mode for a file.")
   :type 'boolean
   :group 'python)
 
-
+
 ;; ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ;; NO USER DEFINABLE VARIABLES BEYOND THIS POINT
 
@@ -504,7 +503,7 @@ Currently-active file is at the head of the list.")
 (defvar py-pychecker-history nil)
 
 
-
+
 ;; Constants
 
 (defconst py-stringlit-re
@@ -585,7 +584,7 @@ Currently-active file is at the head of the list.")
   "Max number of characters from end of buffer to search for stack entry.")
 
 
-
+
 ;; Major mode boilerplate
 
 ;; define a mode-specific abbrev table for those who use such things
@@ -767,7 +766,7 @@ Currently-active file is at the head of the list.")
   (modify-syntax-entry ?. "_" py-dotted-expression-syntax-table))
 
 
-
+
 ;; Utilities
 (defmacro py-safe (&rest body)
   "Safely execute BODY, return nil if an error occurred."
@@ -893,7 +892,7 @@ package.  Note that the latest X/Emacs releases contain this package.")
 	)))
 
 
-
+
 ;; Imenu definitions
 (defvar py-imenu-class-regexp
   (concat				; <<classes>>
@@ -1082,7 +1081,7 @@ of the first definition found."
     (nreverse index-alist)))
 
 
-
+
 (defun py-choose-shell-by-shebang ()
   "Choose CPython or Jython mode by looking at #! on the first line.
 Returns the appropriate mode function.
@@ -1106,7 +1105,7 @@ Used by `py-choose-shell', and similar to but distinct from
     (and elt (caddr elt))))
 
 
-
+
 (defun py-choose-shell-by-import ()
   "Choose CPython or Jython mode based imports.
 If a file imports any packages in `py-jython-packages', within
@@ -1124,7 +1123,7 @@ return `jython', otherwise return nil."
 			))))
     mode))
 
-
+
 (defun py-choose-shell ()
   "Choose CPython or Jython mode. Returns the appropriate mode function.
 This does the following:
@@ -1139,7 +1138,7 @@ This does the following:
 ;               ;; is only way to choose CPython
       ))
 
-
+
 ;;;###autoload
 (defun python-mode ()
   "Major mode for editing Python files.
@@ -1267,7 +1266,7 @@ It is added to `interpreter-mode-alist' and `py-choose-shell'.
   (push '("\\.py$" . python-mode) auto-mode-alist))
 
 
-
+
 ;; electric characters
 (defun py-outdent-p ()
   "Returns non-nil if the current line should dedent one level."
@@ -1324,7 +1323,7 @@ comment."
 	    (indent-to (- indent outdent))
 	    )))))
 
-
+
 ;; Python subprocess utilities and filters
 (defun py-execute-file (proc filename)
   "Send to Python interpreter process PROC \"execfile('FILENAME')\".
@@ -1522,7 +1521,7 @@ If an exception occurred return t, otherwise return nil.  BUF must exist."
     err-p))
 
 
-
+
 ;;; Subprocess commands
 
 ;; only used when (memq 'broken-temp-names py-emacs-features)
@@ -1778,7 +1777,7 @@ is inserted at the end.  See also the command `py-clear-queue'."
     ;; Clean up after ourselves.
     (kill-buffer buf)))
 
-
+
 ;; Code execution commands
 (defun py-execute-buffer (&optional async)
   "Send the contents of the buffer to a Python interpreter.
@@ -1879,7 +1878,7 @@ subtleties, including the use of the optional ASYNC argument."
     (py-execute-region (point-min) (point-max) async)))
 
 
-
+
 (defun py-jump-to-exception (file line)
   "Jump to the Python code in FILE at LINE."
   (let ((buffer (cond ((string-equal file "<stdin>")
@@ -2066,7 +2065,6 @@ number of characters to delete (default is 1)."
 (put 'py-electric-delete    'pending-delete   'supersede) ;pending-del
 
 
-
 (defun py-indent-line (&optional arg)
   "Fix the indentation of the current line according to Python rules.
 With \\[universal-argument] (programmatically, the optional argument
@@ -2537,7 +2535,7 @@ initial line; and comment lines beginning in column 1 are ignored."
   (let ((comment-start py-block-comment-prefix))
     (comment-region beg end arg)))
 
-
+
 ;; Functions for moving point
 (defun py-previous-statement (count)
   "Go to the start of the COUNTth preceding Python statement.
@@ -2727,7 +2725,7 @@ To mark the current `def', see `\\[py-mark-def-or-class]'."
 ;; Backwards compabitility
 (defalias 'end-of-python-def-or-class 'py-end-of-def-or-class)
 
-
+
 ;; Functions for marking regions
 (defun py-mark-block (&optional extend just-move)
   "Mark following block of lines.  With prefix arg, mark structure.
@@ -2976,7 +2974,7 @@ A `nomenclature' is a fancy way of saying AWordWithMixedCaseNotUnderscores."
   (py-pdbtrack-toggle-stack-tracking 0))
 
 
-
+
 ;; Pychecker
 
 ;; hack for FSF Emacs
@@ -3013,7 +3011,7 @@ A `nomenclature' is a fancy way of saying AWordWithMixedCaseNotUnderscores."
   (compile-internal command "No more errors"))
 
 
-
+
 ;; pydoc commands. The guts of this function is stolen from XEmacs's
 ;; symbol-near-point, but without the useless regexp-quote call on the
 ;; results, nor the interactive bit.  Also, we've added the temporary
@@ -3058,7 +3056,7 @@ A `nomenclature' is a fancy way of saying AWordWithMixedCaseNotUnderscores."
     (help-mode)))
 
 
-
+
 ;; Documentation functions
 
 ;; dump the long form of the mode blurb; does the usual doc escapes,
@@ -3370,7 +3368,7 @@ local bindings to py-newline-and-indent."))
 	       ("(python-lib)Miscellaneous Index")))
   )
 
-
+
 ;; Helper functions
 (defvar py-parse-state-re
   (concat
@@ -3678,7 +3676,7 @@ This tells add-log.el how to find the current function/method/variable."
 	scopes))))
 
 
-
+
 (defconst py-help-address "python-mode@python.org"
   "Address accepting submission of bug reports.")
 
@@ -3725,7 +3723,7 @@ to do so may mean a greater delay in fixing your bug.\n\n")
       (exchange-point-and-mark)
       (py-keep-region-active))))
 
-
+
 (defun py-kill-emacs-hook ()
   "Delete files in `py-file-queue'.
 These are Python temporary files awaiting execution."
@@ -3743,7 +3741,7 @@ These are Python temporary files awaiting execution."
 	  minor-mode-alist))
 
 
-
+
 ;;; paragraph and string filling code from Bernhard Herzog
 ;;; see http://mail.python.org/pipermail/python-list/2002-May/103189.html
 
@@ -3905,6 +3903,6 @@ If point is inside a string, narrow to that string and fill.
       (fill-paragraph justify)))))
 
 
-
+
 (provide 'python-mode)
 ;;; python-mode.el ends here

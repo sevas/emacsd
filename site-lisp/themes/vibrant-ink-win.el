@@ -1,12 +1,12 @@
-(defun color-theme-vibrant-ink ()
+(defun color-theme-vibrant-ink-win ()
   "Modified from Vivid Chalk, a vim port of Vibrant Ink."
   (interactive)
   (color-theme-install
-   '(color-theme-vibrant-ink
+   '(color-theme-vibrant-ink-win
      ((background-color . "#111111")
       (background-mode . dark)
       (border-color . "black")
-      (cursor-color . "#9933cc")
+      (cursor-color . "white")
       (foreground-color . "#DDDDDB")
       (list-matching-lines-face . bold)
       (view-highlight-face . highlight))
@@ -37,9 +37,9 @@
 "black"))))
      (modeline-mousable-minor-mode ((t (:background
 "#a5baf1" :foreground "black"))))
-     (region ((t (:background "#222244"))))
+     (region ((t (:background "#444466"))))
      (primary-selection ((t (:background "#555577"))))
-     (isearch ((t (:background "#AA2288"))))
+     (isearch ((t (:background "#555555"))))
      (zmacs-region ((t (:background "#555577"))))
      (secondary-selection ((t (:background "darkslateblue"))))
      (flymake-errline ((t (:background "LightSalmon" :foreground
