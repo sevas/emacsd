@@ -64,3 +64,24 @@
   (abbrev-mode)
   (pabbrev-mode)
   (message "abbrev mode toggled"))
+
+
+(setq eshell-prompt-function
+      (lambda()
+        (concat (getenv "USER") "@" (getenv "HOST") ":"
+                ((lambda (p-lst)
+                   (if (> (length p-lst) 3)
+                       (concat
+                        (mapconcat (lambda (elm) (substring elm 0 1))
+                                   (butlast p-lst (- (length p-lst) 3))
+                                   "/")
+                        "/"
+                        (mapconcat (lambda (elm) elm)
+                                   (last p-lst (- (length p-lst) 3))
+                                   "/"))
+                     (mapconcat (lambda (elm) elm)
+                                p-lst
+                                "/")))
+                 (split-string (eshell/pwd) "/"))
+		"\n>>> "
+                (if (= (user-uid) 0) "# " "$ "))))
