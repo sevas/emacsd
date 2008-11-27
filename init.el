@@ -26,7 +26,7 @@
 
 ;;  extentions & helper functions
 (load-library "general-config")
-(load-library "gnus-config")
+
 
 ;; progmodes
 (load-library "python-config")
@@ -37,6 +37,8 @@
 
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
+
+(load-library "gnus-config")
 
 ;;--------------------
 ;(require 'w3m-load)
