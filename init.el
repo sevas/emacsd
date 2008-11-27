@@ -39,7 +39,6 @@
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
-(load-library "gnus-config")
 
 ;;--------------------
 ;(require 'w3m-load)
