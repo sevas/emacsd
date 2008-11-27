@@ -11,8 +11,7 @@ def ${1:name}(self, $2):
             (mapconcat
              '(lambda (x)
                 (if (not (string= (nth 0 x) ""))
-                    (concat "- " (char-to-string 96) (nth 0 x)
-                            (char-to-string 96) ":")))
+                    (concat (nth 0 x) " -- ")))
              (mapcar
               '(lambda (x)
                  (mapcar

@@ -23,16 +23,17 @@
 
 ;; some global configuration
 (load-library "visual-config")
+(load-library "general-config")
 
 ;; progmodes
-(load-library "python-config")
 (load-library "ruby-config")
 (load-library "lisp-config")
 (load-library "cc-config")
 (load-library "haskell-config")
+;;(load-library "python-config")
 
 ;; other extentions & helper functions
-(load-library "general-config")
+
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
