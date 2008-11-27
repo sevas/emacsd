@@ -23,7 +23,10 @@
 
 ;; some global configuration
 (load-library "visual-config")
+
+;;  extentions & helper functions
 (load-library "general-config")
+(load-library "gnus-config")
 
 ;; progmodes
 (load-library "ruby-config")
@@ -33,7 +36,6 @@
 (load-library "python-config")
 
 ;; other extentions & helper functions
-
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
@@ -101,6 +103,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(frame-background-mode (quote dark))
+ '(highlight-current-line-globally t nil (highlight-current-line))
  '(inhibit-startup-screen t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

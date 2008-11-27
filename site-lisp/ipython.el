@@ -156,11 +156,11 @@ the second for a 'normal' command, and the third for a multiline command.")
 (if (not (executable-find ipython-command))
     (message (format "Can't find executable %s - ipython.el *NOT* activated!!!"
                      ipython-command))
-    ;; XXX load python-mode, so that we can screw around with its variables
-    ;; this has the disadvantage that python-mode is loaded even if no
-    ;; python-file is ever edited etc. but it means that `py-shell' works
-    ;; without loading a python-file first. Obviously screwing around with
-    ;; python-mode's variables like this is a mess, but well.
+  ;; XXX load python-mode, so that we can screw around with its variables
+  ;; this has the disadvantage that python-mode is loaded even if no
+  ;; python-file is ever edited etc. but it means that `py-shell' works
+  ;; without loading a python-file first. Obviously screwing around with
+  ;; python-mode's variables like this is a mess, but well.
   (require 'python-mode)
   ;; turn on ansi colors for ipython and activate completion
   (defun ipython-shell-hook ()

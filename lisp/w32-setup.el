@@ -20,6 +20,16 @@
 (require 'icomplete+)
 
 
+;; (defun set-shell-cmdproxy()
+;;   (interactive)
+;;   (setq shell-file-name "cmdproxy")
+;;   (setq explicit-shell-file-name "cmdproxy")
+;;   (setenv "SHELL" explicit-shell-file-name)
+;;   (setq w32-quote-process-args t)
+;;   (setq shell-command-switch "/c")
+;;   ) 
+
+
 ;; cygwin
 ;;(require 'setup-cygwin)
 
