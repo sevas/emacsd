@@ -30,7 +30,7 @@
 (load-library "lisp-config")
 (load-library "cc-config")
 (load-library "haskell-config")
-;;(load-library "python-config")
+(load-library "python-config")
 
 ;; other extentions & helper functions
 
