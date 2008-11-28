@@ -1,7 +1,6 @@
 ;; color theme
 (require 'color-theme)
 (color-theme-initialize)
-;;(load-library "themes/my-color-theme")
 ;;(my-color-theme)
 (load-library "themes/vibrant-ink-linux")
 (color-theme-vibrant-ink-linux)

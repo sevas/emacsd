@@ -43,7 +43,6 @@
 
 ;;(load-library "cedet-config.el")
 
-
 ;; xrefactory
 ;; (setq exec-path (cons "~/.emacs.d/site-lisp/xref/" exec-path))
 ;; (setq load-path (cons "~/.emacs.d/site-lisp/xref/emacs" load-path))

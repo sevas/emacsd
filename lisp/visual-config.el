@@ -18,7 +18,6 @@
 ;; compilation console
 (setq compilation-window-height 10) 
 
-
 ;; buffer switch with C-tab
 (global-set-key [(control tab)] `other-window) 
 

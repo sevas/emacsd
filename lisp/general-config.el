@@ -12,16 +12,7 @@
 (abbrev-mode (not t))
 (require 'pabbrev)
 (global-pabbrev-mode t)
-
-(windmove-default-keybindings)
-
-;; (defun my-abbrev-hook()
-;;   (abbrev-mode)
-;;   (pabbrev-mode t))
-;; (add-hook 'abbrev-mode 'my-abbrev-hook)
-  
-  
-
+    
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
 (require 'ahg)
@@ -31,11 +22,8 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/site-lisp/snippets")
 
+;; S-<arrows> to switch buffers
 (windmove-default-keybindings)
-
-;; twitter mode
-(require  'twit)
-(twit-mode)
 
 ;; column editing
 (require 'cua-base)
@@ -44,14 +32,13 @@
 ;; highlight-current-line
 (require 'highlight-current-line)
 (highlight-current-line-set-bg-color "#202020")
-;;(highlight-current-line-minor-mode t)
-
+(highlight-current-line-minor-mode t)
 
 ;; xml-mode for ogre .scene file
 (add-to-list 'auto-mode-alist '("\\.scene\\'" . xml-mode ))
 
 ;; functions
-;Reload .emacs on the fly
+;; reload .emacs on the fly
 (defun reload-dot-emacs()
   (interactive)   
   (if(bufferp (get-file-buffer "init.el"))
@@ -65,7 +52,7 @@
   (pabbrev-mode)
   (message "abbrev mode toggled"))
 
-
+;; eshell prompt
 (setq eshell-prompt-function
       (lambda()
         (concat (getenv "USER") "@" (getenv "HOST") ":"

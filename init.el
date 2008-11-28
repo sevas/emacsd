@@ -27,7 +27,6 @@
 ;;  extentions & helper functions
 (load-library "general-config")
 
-
 ;; progmodes
 (load-library "ruby-config")
 (load-library "lisp-config")
@@ -39,63 +38,6 @@
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
-
-;;--------------------
-;(require 'w3m-load)
-;(require 'ipython)
-;(require 'lorem-ipsum)
-;(require 'erc)
-;(require 'column-marker)
-;(require 'dired-single)
-;(require 'pair-mode)
-;(require 'snippet)
-;(require 'linum)
-;(require 'weblogger)
-;(require 'pager)
-;(require 'snippet)
-;Use the newer yasnippet
-;(require 'yasnippet)
-;(yas/initialize)
-;(yas/load-directory "~/.emacs.d/yasnippet-0.2.2/snippets")
-;(load-library "csharp-mode")
-;(load-library "ryan-functions")
-;(load-library "keyboard-shortcuts")
-;(load-library "mmm-mako")
-;(load-library "align")
-;(load-library "g")
-
-;(load-library "ryan-python")
-;(load-library "ryan-shell")
-;(load-library "ryan-subversion")
-
-
-
-;; (custom-set-variables
-;;   ;; custom-set-variables was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  '(inhibit-startup-screen t))
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  )
-
-;; (put 'erase-buffer 'disabled nil)
-;; (custom-set-variables
-;;   ;; custom-set-variables was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  '(inhibit-startup-screen t))
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  )
 
 ;(put 'upcase-region 'disabled nil)
 (custom-set-variables

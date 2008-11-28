@@ -6,8 +6,10 @@
 (load-library "themes/vibrant-ink-win")
 (color-theme-vibrant-ink-win)
 
-;;select font
+;; machine dependent shit (currently, only the font)
 (load-library "local-settings")
+
+;;select font
 ;;(set-face-font 'default "-outline-Consolas-normal-r-normal-normal-12-120-96-96-c-*-iso8859-1")
 ;;(set-default-font "Consolas-10")
 
@@ -30,17 +32,17 @@
 ;;   ) 
 
 
-;; cygwin
-;;(require 'setup-cygwin)
+;; ;; cygwin
+;; (require 'setup-cygwin)
 
-;; (let* ((cygwin-root "c:/cygwin")
-;;       (cygwin-bin (concat cygwin-root "/bin")))
-;;  (setenv "HOME" (concat cygwin-root "/home/sevas"))
-;;  (setenv "PATH" (concat cygwin-bin ";" (getenv "PATH")))
+;; (let* ((cygwin-root "c:/")
+;;        (cygwin-bin (concat cygwin-root "/bin")))
+;;   ;;(setenv "HOME" (concat cygwin-root "/home/Frederic"))
+;;   ;;(setenv "PATH" (concat cygwin-bin ";" (getenv "PATH")))
 ;;  (setq exec-path (cons cygwin-bin exec-path)))
 
 ;; (setq shell-file-name "bash")
 ;; (setq explicit-shell-file-name "bash")
 
-;;(require 'cygwin-mount)
-;;(cygwin-mount-activate)
+;; ;;(require 'cygwin-mount)
+;; ;;(cygwin-mount-activate)

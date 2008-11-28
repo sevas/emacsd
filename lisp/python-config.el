@@ -5,29 +5,30 @@
 ;;(add-to-list 'auto-mode-alist '("SConstruct'" . python-mode ))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
-(add-hook 'python-mode-hook
-	  'pabbrev-mode)
+;;(add-hook 'python-mode-hook
+;;	  'pabbrev-mode)
 
-;; pymacs
-(require 'pymacs)
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-;; ;;(eval-after-load "pymacs"
-;; ;;  '(add-to-list 'pymacs-load-path YOUR-PYMACS-DIRECTORY"))
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
-(ropemacs-mode)
+
+;; TODO : fix rope/ropemacs & shit
+;; ;; pymacs
+;; (require 'pymacs)
+;; (autoload 'pymacs-apply "pymacs")
+;; (autoload 'pymacs-call "pymacs")
+;; (autoload 'pymacs-eval "pymacs" nil t)
+;; (autoload 'pymacs-exec "pymacs" nil t)
+;; (autoload 'pymacs-load "pymacs" nil t)
+;; ;; ;;(eval-after-load "pymacs"
+;; ;; ;;  '(add-to-list 'pymacs-load-path YOUR-PYMACS-DIRECTORY"))
+;; (pymacs-load "ropemacs" "rope-")
+;; (setq ropemacs-enable-autoimport t)
+;; (ropemacs-mode)
 
 ;; ;; python failed tab completion
 ;; (require 'pycomplete)
-;; (require 'ryan-pycomplete)
 
 ;; ipython 
-;;(setq ipython-command "/usr/bin/ipython")
-;;(require 'ipython)
+;; (setq ipython-command "ipython")
+;; (require 'ipython)
 
 ;; growable miniconsole for python backtraces
 (setq resize-mini-windows t
