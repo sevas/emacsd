@@ -34,6 +34,23 @@
 (highlight-current-line-set-bg-color "#202020")
 (highlight-current-line-minor-mode t)
 
+;; ido
+(require 'ido)
+(ido-mode t)
+
+;; textmate 
+(require 'textmate)
+(textmate-mode)
+
+;; icicles
+;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
+;(require 'icicles)
+;(eval-after-load "icomplete" '(progn (require 'icomplete+)))
+;(require 'icomplete)
+;(require 'icomplete+)
+
+
+
 ;; xml-mode for ogre .scene file
 (add-to-list 'auto-mode-alist '("\\.scene\\'" . xml-mode ))
 
@@ -52,23 +69,3 @@
   (pabbrev-mode)
   (message "abbrev mode toggled"))
 
-;; eshell prompt
-(setq eshell-prompt-function
-      (lambda()
-        (concat (getenv "USER") "@" (getenv "HOST") ":"
-                ((lambda (p-lst)
-                   (if (> (length p-lst) 3)
-                       (concat
-                        (mapconcat (lambda (elm) (substring elm 0 1))
-                                   (butlast p-lst (- (length p-lst) 3))
-                                   "/")
-                        "/"
-                        (mapconcat (lambda (elm) elm)
-                                   (last p-lst (- (length p-lst) 3))
-                                   "/"))
-                     (mapconcat (lambda (elm) elm)
-                                p-lst
-                                "/")))
-                 (split-string (eshell/pwd) "/"))
-		"\n>>> "
-                (if (= (user-uid) 0) "# " "$ "))))
