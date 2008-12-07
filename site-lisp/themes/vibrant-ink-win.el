@@ -3,17 +3,17 @@
   (interactive)
   (color-theme-install
    '(color-theme-vibrant-ink-win
-     ((background-color . "#111111")
+     ((background-color . "#030303")
       (background-mode . dark)
       (border-color . "black")
-      (cursor-color . "white")
+      (cursor-color .  "#59c82b")
       (foreground-color . "#DDDDDB")
       (list-matching-lines-face . bold)
       (view-highlight-face . highlight))
      (default ((t (nil))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
-     (fringe ((t (:background "black"))))
+     (fringe ((t (:background "202020"))))
      (font-lock-builtin-face ((t (:foreground "#CCCC33"))))
      (font-lock-comment-face ((t (:italic t :foreground "#9933cc"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#9933cc"))))
@@ -34,10 +34,10 @@
      (modeline-buffer-id ((t (:background "#a5baf1" :foreground
 "black"))))
      (modeline-mousable ((t (:background "#a5baf1" :foreground
-"black"))))
+"black")))) 
      (modeline-mousable-minor-mode ((t (:background
 "#a5baf1" :foreground "black"))))
-     (region ((t (:background "#444466"))))
+     (region ((t (:background "#222244"))))
      (primary-selection ((t (:background "#555577"))))
      (isearch ((t (:background "#555555"))))
      (zmacs-region ((t (:background "#555577"))))

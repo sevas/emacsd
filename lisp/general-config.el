@@ -3,7 +3,7 @@
 
 ;; autocomplete (, {, [
 (require 'pair-mode)
-(pair-mode)
+(pair-mode t)
 
 ;; better i-search highlight
 (require 'ishl)
@@ -31,8 +31,8 @@
 
 ;; highlight-current-line
 (require 'highlight-current-line)
-(highlight-current-line-set-bg-color "#202020")
-(highlight-current-line-minor-mode t)
+(highlight-current-line-set-bg-color "#101020")
+(Highlight-current-line-minor-mode t)
 
 ;; ido
 (require 'ido)
@@ -41,6 +41,28 @@
 ;; textmate 
 (require 'textmate)
 (textmate-mode)
+
+;; cursor-chg
+(require 'cursor-chg)  ; Load the library
+(toggle-cursor-type-when-idle 1) ; Turn on cursor change when Emacs is idle
+(change-cursor-mode 1) ; Turn on change for overwrite, read-only, and input mode
+
+;; Change cursor color according to mode
+;; (defvar hcz-set-cursor-color-color "")
+;; (defvar hcz-set-cursor-color-buffer "")
+;; (defun hcz-set-cursor-color-according-to-mode ()
+;;   "change cursor color according to some minor modes."
+;;   ;; set-cursor-color is somewhat costly, so we only call it when needed:
+;;   (let ((color
+;; 	 (if buffer-read-only "white"
+;; 	   (if overwrite-mode "red"
+;; 	     "yellow"))))
+;;     (unless (and
+;; 	     (string= color hcz-set-cursor-color-color)
+;; 	     (string= (buffer-name) hcz-set-cursor-color-buffer))
+;;       (set-cursor-color (setq hcz-set-cursor-color-color color))
+;;       (setq hcz-set-cursor-color-buffer (buffer-name)))))
+;; (add-hook 'post-command-hook 'hcz-set-cursor-color-according-to-mode)
 
 ;; icicles
 ;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
