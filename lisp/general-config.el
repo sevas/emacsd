@@ -32,7 +32,7 @@
 ;; highlight-current-line
 (require 'highlight-current-line)
 (highlight-current-line-set-bg-color "#101020")
-(Highlight-current-line-minor-mode t)
+(highlight-current-line-minor-mode t)
 
 ;; ido
 (require 'ido)
