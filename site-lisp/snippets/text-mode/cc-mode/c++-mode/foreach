@@ -1,0 +1,6 @@
+#name : BOOST_FOREACH (..., ...) { ... }
+# --
+BOOST_FOREACH (${1:Item it}, ${2:collection})
+{
+    $0
+} 
