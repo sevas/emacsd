@@ -73,8 +73,10 @@
 
 
 
-;; xml-mode for ogre .scene file
+;; file/mode associations
 (add-to-list 'auto-mode-alist '("\\.scene\\'" . xml-mode ))
+(add-to-list 'auto-mode-alist '("\\.layout\\'" . xml-mode ))
+(add-to-list 'auto-mode-alist '("\\.ui\\'" . xml-mode ))
 
 ;; functions
 ;; reload .emacs on the fly
