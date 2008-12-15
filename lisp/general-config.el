@@ -47,6 +47,9 @@
 (toggle-cursor-type-when-idle 1) ; Turn on cursor change when Emacs is idle
 (change-cursor-mode 1) ; Turn on change for overwrite, read-only, and input mode
 
+;; quicksilver for emacs
+(require 'anything)
+
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
 ;; (defvar hcz-set-cursor-color-buffer "")
