@@ -50,6 +50,9 @@
 ;; quicksilver for emacs
 (require 'anything)
 
+;; show whitespaces and tabs
+(require 'blank-mode)
+
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
 ;; (defvar hcz-set-cursor-color-buffer "")
