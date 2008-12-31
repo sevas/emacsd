@@ -53,6 +53,9 @@
 ;; show whitespaces and tabs
 (require 'blank-mode)
 
+;; highlight occurences of selected symbol
+(load-library "light-symbol")
+
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
 ;; (defvar hcz-set-cursor-color-buffer "")
