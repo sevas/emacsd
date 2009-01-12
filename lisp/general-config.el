@@ -63,7 +63,6 @@
                 ("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
 
-
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
 ;; (defvar hcz-set-cursor-color-buffer "")
