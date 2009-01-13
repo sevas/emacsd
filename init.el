@@ -48,7 +48,8 @@
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
  '(highlight-current-line-globally t nil (highlight-current-line))
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(rst-level-face-base-light 15))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
