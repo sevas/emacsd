@@ -46,6 +46,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(frame-background-mode (quote dark))
+ '(haskell-font-lock-symbols (quote unicode))
  '(highlight-current-line-globally t nil (highlight-current-line))
  '(inhibit-startup-screen t)
  '(rst-level-face-base-light 15))
