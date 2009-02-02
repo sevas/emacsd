@@ -56,6 +56,8 @@
 ;; highlight occurences of selected symbol
 (load-library "light-symbol")
 
+
+
 ;; reStructuredText
 (require 'rst)
 (setq auto-mode-alist
@@ -109,3 +111,5 @@
   (pabbrev-mode)
   (message "abbrev mode toggled"))
 
+(defalias 'qr 'query-replace)
+(defalias 'qrr 'query-replace-regexp)

@@ -57,4 +57,7 @@
 		  (((class color))
 		   (:foreground "dodger blue"))
 		  (t (:underline t))))
+     (ido-first-match ((((class color))
+			(:foreground "LimeGreen"))
+		       (t (:bold t))))
      ))) 
