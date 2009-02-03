@@ -71,4 +71,5 @@
 			(:foreground "IndianRed3"))
 		       (t (:bold t))))
      (hi-blue ((t (:background "SkyBlue4" :foreground "White"))))
+     (completions-first-difference ((t (:foreground "IndianRed3"))))
      ))) 

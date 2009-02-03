@@ -65,6 +65,10 @@
                 ("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
 
+;; cg
+(require 'cg-mode)
+(add-to-list 'auto-mode-alist '("\\.cg2\\'" . cg-mode))
+
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
 ;; (defvar hcz-set-cursor-color-buffer "")
@@ -83,11 +87,11 @@
 ;; (add-hook 'post-command-hook 'hcz-set-cursor-color-according-to-mode)
 
 ;; icicles
-;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
-;(require 'icicles)
-;(eval-after-load "icomplete" '(progn (require 'icomplete+)))
-;(require 'icomplete)
-;(require 'icomplete+)
+;; (setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
+;; (require 'icicles)
+;; (eval-after-load "icomplete" '(progn (require 'icomplete+)))
+;; (require 'icomplete)
+;; (require 'icomplete+)
 
 
 
