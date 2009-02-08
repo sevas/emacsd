@@ -13,7 +13,7 @@
      (default ((t (nil))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
-     (fringe ((t (:background "#090909"))))
+     (fringe ((t (:background "#040404"))))
      ;;(cursor ((t (:foreground "#404040") (:background "#404040")))) 
      (font-lock-builtin-face ((t (:foreground "#CCCC33"))))
      (font-lock-comment-face ((t (:italic t :foreground "#9933cc"))))
@@ -34,18 +34,18 @@
      (highlight ((t (:background "darkolivegreen"))))
      (italic ((t (:italic t))))
      (vertical-border ((t (:foreground "#404040"))))
-     (mode-line ((t (:background "black" :foreground "MediumPurple"))))
-     (mode-line-inactive ((t (:background "black" :foreground "#404040"))))
+     (mode-line ((t (:background "#000000" :foreground "MediumPurple"))))
+     (mode-line-inactive ((t (:background "#000000" :foreground "#404040"))))
      (mode-line-buffer-id ((t (:bold t))))
-     (mode-line-mousable ((t (:background "#a5baf1" :foreground
+     (modeline-mousable ((t (:background "#a5baf1" :foreground
 					 "black")))) 
-     (mode-line-mousable-minor-mode ((t (:background
+     (modeline-mousable-minor-mode ((t (:background
 					"#a5baf1" :foreground "black"))))
-     (region ((t (:background "#222244"))))
+     (region ((t (:background "#303040"))))
      (primary-selection ((t (:background "#555577"))))
      (isearch ((t (:foreground "#000000" :background "HotPink1"))))
      (lazy-highlight ((t (:foreground "#000000" :background "MediumPurple1"))))
-     (zmacs-region ((t (:background "#555577"))))
+     (zmacs-region ((t (:background "#202030"))))
      (secondary-selection ((t (:background "darkslateblue"))))
      (flymake-errline ((t (:background "LightSalmon" :foreground
 				       "black"))))

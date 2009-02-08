@@ -41,7 +41,7 @@
 					 "black")))) 
      (modeline-mousable-minor-mode ((t (:background
 					"#a5baf1" :foreground "black"))))
-     (region ((t (:background "#303040X"))))
+     (region ((t (:background "#303040"))))
      (primary-selection ((t (:background "#555577"))))
      (isearch ((t (:foreground "#000000" :background "HotPink1"))))
      (lazy-highlight ((t (:foreground "#000000" :background "MediumPurple1"))))
