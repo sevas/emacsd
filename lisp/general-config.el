@@ -39,8 +39,8 @@
 (ido-mode t)
 
 ;; textmate 
-(require 'textmate)
-(textmate-mode)
+;;(require 'textmate)
+;;(textmate-mode)
 
 ;; cursor-chg
 (require 'cursor-chg)  ; Load the library
