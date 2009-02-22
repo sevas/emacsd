@@ -40,6 +40,7 @@
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
+(server-start)
 
 ;(put 'upcase-region 'disabled nil)
 (custom-set-variables

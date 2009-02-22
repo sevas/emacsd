@@ -39,8 +39,8 @@
 (ido-mode t)
 
 ;; textmate 
-(require 'textmate)
-(textmate-mode)
+;;(require 'textmate)
+;;(textmate-mode)
 
 ;; cursor-chg
 (require 'cursor-chg)  ; Load the library
@@ -56,12 +56,18 @@
 ;; highlight occurences of selected symbol
 (load-library "light-symbol")
 
+
+
 ;; reStructuredText
 (require 'rst)
 (setq auto-mode-alist
       (append '(("\\.txt$" . rst-mode)
                 ("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
+
+;; cg
+(require 'cg-mode)
+(add-to-list 'auto-mode-alist '("\\.cg2\\'" . cg-mode))
 
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
@@ -81,11 +87,11 @@
 ;; (add-hook 'post-command-hook 'hcz-set-cursor-color-according-to-mode)
 
 ;; icicles
-;(setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
-;(require 'icicles)
-;(eval-after-load "icomplete" '(progn (require 'icomplete+)))
-;(require 'icomplete)
-;(require 'icomplete+)
+;; (setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
+;; (require 'icicles)
+;; (eval-after-load "icomplete" '(progn (require 'icomplete+)))
+;; (require 'icomplete)
+;; (require 'icomplete+)
 
 
 
@@ -109,3 +115,5 @@
   (pabbrev-mode)
   (message "abbrev mode toggled"))
 
+(defalias 'qr 'query-replace)
+(defalias 'qrr 'query-replace-regexp)
