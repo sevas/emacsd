@@ -115,5 +115,15 @@
   (pabbrev-mode)
   (message "abbrev mode toggled"))
 
+
+(defun dos2unix()
+  (interactive)
+  (set-buffer-file-coding-system 'undecided-unix))
+
+(defun unix2dos()
+  (interactive)
+  (set-buffer-file-coding-system 'undecided-dos))
+
+
 (defalias 'qr 'query-replace)
 (defalias 'qrr 'query-replace-regexp)
