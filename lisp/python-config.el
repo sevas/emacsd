@@ -47,6 +47,29 @@
       max-mini-window-height .85)
 
 
+;;(add-hook 'python-mode-hook
+;; 	  (lambda ()
+;; 	    (font-lock-add-keywords nil
+;; 				    '(("\\<\\(TODO\\):" 1 font-lock-warning-face prepend)
+;; 				      ("\\<\\(and\\|or\\|not\\)\\>" .
+;; 				       font-lock-keyword-face)))))
+
+
+
+;;(add-hook 'python-mode
+;; (lambda ()
+;;   (font-lock-add-keywords nil
+;;    '(( "\\<\\(FIXME\\):" 1 font-lock-keyword-face prepend)))))
+
+  ;; ( "\\(<\\)\\(TRUE\\|FALSE\\|NULL\\|void\\)\\(/>\\)"
+  ;; 	 (1 font-lock-tag-face)
+  ;; 	 (2 font-lock-constant-face)
+  ;; 	 (3 font-lock-tag-face))
+  ;; ( "\\(@\\)\\(author\\|see\\|param\\|throws\\|returns?\\|version\\)"
+  ;; 	 (1 font-lock-tag-face)
+  ;; 	 (2 font-lock-constant-face))
+  ;; ))
+
 
 
 ;; pdb
