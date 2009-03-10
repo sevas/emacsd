@@ -1,10 +1,13 @@
 ;; color theme
 (require 'color-theme)
 (color-theme-initialize)
-;;(load-library "themes/my-color-theme")
-;;(my-color-theme)
-(load-library "themes/vibrant-ink-win")
-(color-theme-vibrant-ink-win)
+
+;;(load-library "themes/color-theme-vibrant-ink")
+;;(color-theme-vibrant-ink-win)
+
+
+(load-library "themes/color-theme-tango")
+(color-theme-tango)
 
 ;; machine dependent shit (currently, only the font)
 (load-library "local-settings")

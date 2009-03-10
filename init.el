@@ -10,6 +10,7 @@
 (labels ((add-path (p)
 		   (add-to-list 'load-path
 				(concat emacs-root p))))
+
   (add-path ".emacs.d/lisp") ;; personnal elisp code
   (add-path ".emacs.d/site-lisp") ;; elisp from the interwub
   (add-path ".emacs.d/site-lisp/haskell-mode-2.4"))
