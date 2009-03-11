@@ -31,12 +31,14 @@
 
 ;; highlight-current-line
 (require 'highlight-current-line)
-(highlight-current-line-set-bg-color "#101020")
+(highlight-current-line-set-bg-color
+ (plist-get (custom-face-attributes-get 'region nil) :background))
 (highlight-current-line-minor-mode t)
 
 ;; ido
 (require 'ido)
 (ido-mode t)
+
 
 ;; textmate 
 ;;(require 'textmate)

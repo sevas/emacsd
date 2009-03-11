@@ -1,9 +1,9 @@
-(defun color-theme-vibrant-ink-linux ()
+(defun color-theme-vibrant-ink-win ()
   "Modified from Vivid Chalk, a vim port of Vibrant Ink."
   (interactive)
   (color-theme-install
-   '(color-theme-vibrant-ink-linux
-     ((background-color . "black")
+   '(color-theme-vibrant-ink-win
+     ((background-color . "#030303")
       (background-mode . dark)
       (border-color . "black")
       (cursor-color .  "MediumOrchid1")
@@ -13,8 +13,7 @@
      (default ((t (nil))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
-     (fringe ((t (:background "#040404"))))
-     ;;(cursor ((t (:foreground "#404040") (:background "#404040")))) 
+     (fringe ((t (:background "#070707"))))
      (font-lock-builtin-face ((t (:foreground "#CCCC33"))))
      (font-lock-comment-face ((t (:italic t :foreground "#9933cc"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#9933cc"))))
