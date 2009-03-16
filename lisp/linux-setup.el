@@ -9,8 +9,9 @@
 
 (if window-system
     (color-theme-tango))
-(if (not (window-system))
-    (color-theme-tty-dark))
+;;(if (not (window-system))
+;;    (color-theme-tty-dark))
+
 
 
 (load-library "local-settings")
