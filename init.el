@@ -14,7 +14,7 @@
   (add-path ".emacs.d/lisp") ;; personnal elisp code
   (add-path ".emacs.d/site-lisp") ;; elisp from the interwub
   (add-path ".emacs.d/site-lisp/haskell-mode-2.4"))
-  ;;(add-path ".emacs.d/site-lisp/darkroom-mode"))
+
 
 
 

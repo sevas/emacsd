@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; CEDET
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq semantic-load-turn-useful-things-on t)
 (load-file "~/.emacs.d/site-lisp/cedet-1.0pre4/common/cedet.el")
 ;;make all the 'semantic.cache' files go somewhere sane
 (setq semanticdb-default-save-directory "~/emacs-meta/semantic.cache/")
