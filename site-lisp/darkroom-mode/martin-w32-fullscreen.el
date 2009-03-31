@@ -10,7 +10,7 @@
 (defvar w32-fullscreen-python-cmd "C:/Python25/python.exe"
   "Path to python executable")
 (defvar w32-fullscreen-toggletitle-cmd
-   "c:/Python25/Scripts/w32toggletitle.py"
+   (concat emacs-root ".emacs.d/site-lisp/darkroom-mode/w32toggletitle.py")
    "Path to w32toggletitle.py")
 
 ;; ------ code -----

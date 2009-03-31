@@ -21,6 +21,11 @@
 ;; (require 'icomplete+)
 
 
+;;darkroom
+(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/darkroom-mode"))
+(require 'martin-darkroom)
+
+
 ;; eshell prompt
 (setq eshell-prompt-function
       (lambda()
