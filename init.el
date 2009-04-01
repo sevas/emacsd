@@ -41,7 +41,22 @@
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
-(server-start)
+;; bat mode
+(setq auto-mode-alist 
+      (append 
+       (list (cons "\\.[bB][aA][tT]$" 'bat-mode))
+       ;; For DOS init files
+       (list (cons "CONFIG\\."   'bat-mode))
+       (list (cons "AUTOEXEC\\." 'bat-mode))
+       auto-mode-alist))
+
+(autoload 'bat-mode "bat-mode"
+  "DOS and WIndows BAT files" t)
+
+
+
+
+
 
 ;(put 'upcase-region 'disabled nil)
 (custom-set-variables
