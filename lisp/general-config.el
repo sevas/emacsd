@@ -31,18 +31,15 @@
 
 ;; highlight-current-line
 (require 'highlight-current-line)
-(highlight-current-line-set-bg-color
- (plist-get (custom-face-attributes-get 'region nil) :background))
+;;(highlight-current-line-set-bg-color
+;; (plist-get (custom-face-attributes-get 'fringe nil) :foreground))
+(highlight-current-line-set-bg-color "#363943")
+
 (highlight-current-line-minor-mode t)
 
 ;; ido
-(require 'ido)
+(require 'ido) 
 (ido-mode t)
-
-
-;; textmate 
-;;(require 'textmate)
-;;(textmate-mode)
 
 ;; cursor-chg
 (require 'cursor-chg)  ; Load the library
