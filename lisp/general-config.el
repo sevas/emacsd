@@ -68,6 +68,12 @@
 (require 'cg-mode)
 (add-to-list 'auto-mode-alist '("\\.cg2\\'" . cg-mode))
 
+;; glsl
+(autoload 'glsl-mode "glsl-mode" nil t)	
+(add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode)
+(add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
+
 
 ;; set up unicode
 (prefer-coding-system       'utf-8)
