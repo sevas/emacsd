@@ -47,6 +47,11 @@
       max-mini-window-height .85)
 
 
+;; pysmell (completion)
+(require 'pysmell)
+(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+
+
 ;;(add-hook 'python-mode-hook
 ;; 	  (lambda ()
 ;; 	    (font-lock-add-keywords nil
@@ -94,3 +99,5 @@
   
 ;;   (add-to-list 'flymake-allowed-file-name-masks
 ;;                '("\\.py\\'" flymake-pylint-init)))
+
+
