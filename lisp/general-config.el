@@ -114,6 +114,8 @@
 ;; (require 'icomplete+)
 
 
+(require 'browse-kill-ring)
+
 
 ;; file/mode associations
 (add-to-list 'auto-mode-alist '("\\.scene\\'" . xml-mode ))
