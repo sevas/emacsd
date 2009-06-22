@@ -89,6 +89,15 @@
 (set-clipboard-coding-system 'utf-16le-dos)
 
 
+;; org-mode
+(setq load-path (cons "~/.emacs.d/site-lisp/org-mode/lisp" load-path))
+(require 'org)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)1
+(define-key global-map "\C-ca" 'org-agenda)
+
+
+
 ;; Change cursor color according to mode
 ;; (defvar hcz-set-cursor-color-color "")
 ;; (defvar hcz-set-cursor-color-buffer "")
