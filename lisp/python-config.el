@@ -48,8 +48,8 @@
 
 
 ;; pysmell (completion)
-(require 'pysmell)
-(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+;;require 'pysmell)
+;;add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
 
 ;;(add-hook 'python-mode-hook

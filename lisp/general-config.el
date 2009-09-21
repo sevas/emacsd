@@ -1,6 +1,8 @@
 ;; default 
 ;; (setq find-file-default emacs-root)
 
+(auto-fill-mode t)
+
 ;; autocomplete (, {, [
 (require 'pair-mode)
 (pair-mode t)
@@ -27,7 +29,7 @@
 
 ;; column editing
 (require 'cua-base)
-(cua-mode)
+(cua-mode t)
 
 ;; highlight-current-line
 (require 'highlight-current-line)
@@ -74,6 +76,21 @@
 (add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
+
+
+
+;; bat mode
+(setq auto-mode-alist 
+      (append 
+       (list (cons "\\.[bB][aA][tT]$" 'bat-mode))
+       ;; For DOS init files
+       ;;(list (cons "CONFIG\\."   'bat-mode))
+       ;;(list (cons "AUTOEXEC\\." 'bat-mode))
+       auto-mode-alist))
+
+(autoload 'bat-mode "bat-mode"
+  "DOS and WIndows BAT files" t)
+
 
 
 ;; set up unicode
@@ -201,3 +218,9 @@ table determines which characters these are."
 (defun wc ()
   (interactive)
   (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
+
+
+
+;(fset 'select-buffer
+;   [?\C-a ?\M-])
+;(global-set-key "^Ca" (quote select-buffer))

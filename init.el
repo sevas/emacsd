@@ -41,19 +41,6 @@
 
 (autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
-;; bat mode
-(setq auto-mode-alist 
-      (append 
-       (list (cons "\\.[bB][aA][tT]$" 'bat-mode))
-       ;; For DOS init files
-       ;;(list (cons "CONFIG\\."   'bat-mode))
-       ;;(list (cons "AUTOEXEC\\." 'bat-mode))
-       auto-mode-alist))
-
-(autoload 'bat-mode "bat-mode"
-  "DOS and WIndows BAT files" t)
-
-
 
 
 
@@ -67,8 +54,7 @@
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
  '(highlight-current-line-globally t nil (highlight-current-line))
- '(inhibit-startup-screen t)
- '(rst-level-face-base-light 15))
+ '(inhibit-startup-screen t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

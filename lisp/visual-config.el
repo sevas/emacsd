@@ -42,3 +42,6 @@
 
 ;; window title
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
+
+
+;;(setq frame-background-mode 'dark)
