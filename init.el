@@ -1,7 +1,7 @@
 (require 'cl)
 
 (defvar emacs-root (if (eq system-type 'windows-nt)
-		       (concat (getenv "APPDATA") "/")
+		       (concat (getenv "USERPROFILE") "/")
 		     (if (eq system-type 'gnu/linux)
 			 (concat "/home/" user-login-name "/")))
   "My home directory — the root of my personal emacs load-path.")
