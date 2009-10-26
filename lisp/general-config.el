@@ -1,7 +1,18 @@
 ;; default 
 ;; (setq find-file-default emacs-root)
 
+
+;; "y or n" instead of "yes or no"
+(fset 'yes-or-no-p 'y-or-n-p)
+
+
 (auto-fill-mode t)
+;; Line-wrapping
+(set-default 'fill-column 80)
+
+
+;; Prevent the annoying beep on errors
+(setq visible-bell t)
 
 ;; autocomplete (, {, [
 (require 'pair-mode)
