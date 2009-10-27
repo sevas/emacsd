@@ -223,15 +223,12 @@ table determines which characters these are."
               "The region has %d words." count))))))
 
 
-
-
 ;; word count in buffer
 (defun wc ()
   (interactive)
   (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
 
 
-
-;(fset 'select-buffer
-;   [?\C-a ?\M-])
-;(global-set-key "^Ca" (quote select-buffer))
+;;(fset 'select-buffer
+;;   [?\C-a ?\M-])
+;;(global-set-key "^Ca" (quote select-buffer))
