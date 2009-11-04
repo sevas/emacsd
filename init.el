@@ -32,7 +32,7 @@
 (load-library "visual-config")
 
 ;;  extentions & helper functions
-;;(load-library "general-config")
+(load-library "general-config")
 
 ;; progmodes
 ;;(load-library "ruby-config")
@@ -42,28 +42,14 @@
 (load-library "python-config")
 
 ;; other extentions & helper functions
-
 ;;(autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
-
-
-
-
 ;(put 'upcase-region 'disabled nil)
-;;(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- ;;'(rst-level-face-base-light 15))
+
+
 
 (custom-set-faces
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
  '(highlight-current-line-globally t nil (highlight-current-line))
  '(inhibit-startup-screen t))
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-;; '(fixed-pitch ((t (:family "Consolas")))))

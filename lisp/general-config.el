@@ -1,4 +1,4 @@
-;; default 
+; default 
 ;; (setq find-file-default emacs-root)
 
 
@@ -12,7 +12,7 @@
 
 
 ;; Prevent the annoying beep on errors
-(setq visible-bell t)
+;;(setq visible-bell t)
 
 ;; autocomplete (, {, [
 (require 'pair-mode)
