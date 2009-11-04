@@ -3,7 +3,9 @@
 (defvar emacs-root (if (eq system-type 'windows-nt)
 		       (concat (getenv "USERPROFILE") "/")
 		     (if (eq system-type 'gnu/linux)
-			 (concat "/home/" user-login-name "/")))
+			 (concat "/home/" user-login-name "/")
+			(if (eq system-type 'darwin)
+			     (concat "/Users/" user-login-name "/"))))
   "My home directory — the root of my personal emacs load-path.")
 
 
@@ -22,42 +24,46 @@
 (if (eq system-type 'windows-nt)
     (load-library "w32-setup")
   (if (eq system-type 'gnu/linux)
-      (load-library "linux-setup")))
+      (load-library "linux-setup")
+     (if (eq system-type 'darwin)
+       (load-library "osx-setup"))))
 
 ;; some global configuration
 (load-library "visual-config")
 
 ;;  extentions & helper functions
-(load-library "general-config")
+;;(load-library "general-config")
 
 ;; progmodes
-(load-library "ruby-config")
+;;(load-library "ruby-config")
 (load-library "lisp-config")
-(load-library "cc-config")
+;;(load-library "cc-config")
 (load-library "haskell-config")
 (load-library "python-config")
 
 ;; other extentions & helper functions
 
-(autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
+;;(autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
 
 
 
 
 
 ;(put 'upcase-region 'disabled nil)
-(custom-set-variables
+;;(custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ ;;'(rst-level-face-base-light 15))
+
+(custom-set-faces
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
  '(highlight-current-line-globally t nil (highlight-current-line))
  '(inhibit-startup-screen t))
-(custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(fixed-pitch ((t (:family "Consolas")))))
+;; '(fixed-pitch ((t (:family "Consolas")))))

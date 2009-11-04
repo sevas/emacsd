@@ -32,7 +32,7 @@
   ;; Automatically save project python buffers before refactorings
   (setq ropemacs-confirm-saving 'nil)
   )
-(global-set-key "\C-xpl" 'load-ropemacs)
+;;(global-set-key "\C-xpl" 'load-ropemacs)
 
 
 ;; ;; python failed tab completion
@@ -48,8 +48,8 @@
 
 
 ;; pysmell (completion)
-;;require 'pysmell)
-;;add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+;;(require 'pysmell)
+;;(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
 
 ;;(add-hook 'python-mode-hook
