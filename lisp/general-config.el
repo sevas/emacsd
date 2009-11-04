@@ -1,4 +1,4 @@
-;; default 
+; default 
 ;; (setq find-file-default emacs-root)
 
 
