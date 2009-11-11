@@ -12,7 +12,7 @@
 
 
 ;; Prevent the annoying beep on errors
-;;(setq visible-bell t)
+(setq visible-bell t)
 
 ;; autocomplete (, {, [
 (require 'pair-mode)
@@ -232,3 +232,7 @@ table determines which characters these are."
 ;;(fset 'select-buffer
 ;;   [?\C-a ?\M-])
 ;;(global-set-key "^Ca" (quote select-buffer))
+
+
+
+ (require 'go-mode-load)
