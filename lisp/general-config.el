@@ -103,6 +103,11 @@
   "DOS and WIndows BAT files" t)
 
 
+;; latex files with latex-mode (instead of tex-mode)
+(add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
+(add-to-list 'auto-mode-alist '("\\.inc\\'" . latex-mode))
+
+
 
 ;; set up unicode
 (prefer-coding-system       'utf-8)

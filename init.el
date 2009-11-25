@@ -35,9 +35,9 @@
 (load-library "general-config")
 
 ;; progmodes
-;;(load-library "ruby-config")
+(load-library "ruby-config")
 (load-library "lisp-config")
-;;(load-library "cc-config")
+(load-library "cc-config")
 (load-library "haskell-config")
 (load-library "python-config")
 

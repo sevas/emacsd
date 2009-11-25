@@ -71,3 +71,9 @@
 
 ;; ;;(require 'cygwin-mount)
 ;; ;;(cygwin-mount-activate)
+
+
+
+;; emacs-server fix for windows
+(and (= emacs-major-version 23)
+     (defun server-ensure-safe-dir (dir) "Noop" t))

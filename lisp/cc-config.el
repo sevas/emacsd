@@ -24,6 +24,21 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 
+;; C++ and C mode...
+;; http://www.freebsd.org/doc/en/books/developers-handbook/emacs.html
+(defun my-c++-mode-hook ()
+  (setq tab-width 4)
+  (define-key c++-mode-map "\C-m" 'reindent-then-newline-and-indent)
+  (define-key c++-mode-map "\C-ce" 'c-comment-edit)
+  (setq c++-auto-hungry-initial-state 'none)
+  (setq c++-delete-function 'backward-delete-char)
+  (setq c++-tab-always-indent t)
+  (setq c-indent-level 4)
+  (setq c-continued-statement-offset 4)
+  (setq c++-empty-arglist-indent 4))
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
+
 ;; build command
 (global-set-key [(f6)] 'compile)
 

@@ -1,0 +1,8 @@
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.8\linewidth]{${1:figureName}}
+  % \includegraphics[width=.95\linewidth, bb=39 696 126 756]{sampleFig}
+  \caption{\label{fig:$1}
+	$0
+  }
+\end{figure}
