@@ -2,8 +2,12 @@
 
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode ))
-;;(add-to-list 'auto-mode-alist '("SConstruct'" . python-mode ))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
+(setq auto-mode-alist
+      (cons '("SConstruct" . python-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("SConscript" . python-mode) auto-mode-alist))
 
 ;;(add-hook 'python-mode-hook
 ;;	  'pabbrev-mode)
