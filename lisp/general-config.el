@@ -103,6 +103,10 @@
   "DOS and WIndows BAT files" t)
 
 
+;;graphviz
+(load-library "graphviz-dot-mode") 
+
+
 ;; latex files with latex-mode (instead of tex-mode)
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . latex-mode))
