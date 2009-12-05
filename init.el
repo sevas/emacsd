@@ -6,7 +6,7 @@
 			 (concat "/home/" user-login-name "/")
 			(if (eq system-type 'darwin)
 			     (concat "/Users/" user-login-name "/"))))
-  "My home directory â€” the root of my personal emacs load-path.")
+  "My home directoryâ the root of my personal emacs load-path.")
 
 
 (labels ((add-path (p)
