@@ -31,25 +31,23 @@
 ;; some global configuration
 (load-library "visual-config")
 
-;;  extentions & helper functions
+;;  extensions
 (load-library "general-config")
 
-;; progmodes
-(load-library "ruby-config")
-(load-library "lisp-config")
-(load-library "cc-config")
-(load-library "haskell-config")
-(load-library "python-config")
+;; load helper functions
+(load-library "funcs")
+
+;; load progmodes & file associations
+(load-library "progmodes")
+
 
 ;; other extentions & helper functions
 ;;(autoload 'typing-of-emacs "The Typing Of Emacs, a game." t)
-
-;(put 'upcase-region 'disabled nil)
-
 
 
 (custom-set-faces
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
- '(highlight-current-line-globally t nil (highlight-current-line))
- '(inhibit-startup-screen t))
+ ;;'(highlight-current-line-globally t nil (highlight-current-line))
+ '(inhibit-startup-screen t)
+)

@@ -31,7 +31,7 @@
 
 ;; disable sound
 ;; (setq visible-bell t)
-;(setq ring-bell-function (lambda () (message "*beep*")))
+(setq ring-bell-function (lambda () (message "*beep*")))
 
 ;; (setq ring-bell-function 
 ;;       (lambda ()
@@ -44,3 +44,25 @@
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
 (setq frame-background-mode 'dark)
+
+
+;; highlight-current-line
+(require 'highlight-current-line)
+;;(highlight-current-line-set-bg-color
+;; (plist-get (custom-face-attributes-get 'fringe nil) :foreground))
+(highlight-current-line-set-bg-color "#363943")
+(highlight-current-line-minor-mode t)
+
+
+;; highlight occurences of selected symbol
+(load-library "light-symbol")
+(light-symbol-mode)
+
+
+;; autocomplete (, {, [
+(require 'pair-mode)
+(pair-mode t)
+
+;; better i-search highlight
+(require 'ishl)
+
