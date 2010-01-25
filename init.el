@@ -1,12 +1,12 @@
 (require 'cl)
 
 (defvar emacs-root (if (eq system-type 'windows-nt)
-		       (concat (getenv "USERPROFILE") "/")
+		       (concat (getenv "USERPROFILE") "/AppData/Roaming/")
 		     (if (eq system-type 'gnu/linux)
 			 (concat "/home/" user-login-name "/")
 			(if (eq system-type 'darwin)
 			     (concat "/Users/" user-login-name "/"))))
-  "My home directoryâ the root of my personal emacs load-path.")
+  "My home directory the root of my personal emacs load-path.")
 
 
 (labels ((add-path (p)
