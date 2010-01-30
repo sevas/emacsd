@@ -3,12 +3,28 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+
+(setq inhibit-startup-screen t)
 ;; highlight selection
 (transient-mark-mode t) 
 
 ;; parenthesis matching
 (show-paren-mode 1)
 (setq-default hilight-paren-expression t) 
+
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(case-fold-search t)
+ '(display-time-mode t)
+ '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(size-indication-mode t)
+ ;;'(truncate-lines t)
+ )
+
 
 ;; syntax color
 (global-font-lock-mode t)
@@ -26,8 +42,8 @@
 (setq display-time-24hr-format t) 
 
 ;; color/line numbers
-(setq column-number-mode t)
-(setq line-number-mode t) 
+(setq column-number-mode t
+      line-number-mode t))
 
 ;; disable sound
 ;; (setq visible-bell t)
@@ -66,3 +82,6 @@
 ;; better i-search highlight
 (require 'ishl)
 
+
+;; No 'yes or no' question, only 'y or n'
+(fset 'yes-or-no-p 'y-or-n-p)

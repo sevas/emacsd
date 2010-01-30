@@ -13,3 +13,5 @@
 ;; M-x mac-font-panel-mode
 ;; M-x describe-font
 ;; (set-default-font "-apple-monaco-medium-r-normal--10-0-72-72-m-0-iso10646-1")
+;;(set-default-font "-apple-monaco-medium-r-normal--10-0-72-72-m-0-iso10646-1")
+;;(set-default-font "Anonymous Pro 12" )
