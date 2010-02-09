@@ -47,6 +47,7 @@
      (mode-line          ((t (:background "grey10" :foreground "#ccccca"))))
      (mode-line-inactive ((t (:background "grey10" :foreground "#2e3436"))))
      (mode-line-buffer-id ((t (:bold t :foreground "#729fcf"))))
+     
      (completions-first-difference ((t (:foreground "#729fcf"))))
      (eshell-prompt ((t (:bold t :foreground "#729fcf"))))
      (erc-default-face ((t (nil))))
