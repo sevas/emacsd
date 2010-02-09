@@ -14,7 +14,7 @@
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
      (fringe ((t (:background "#252323"))))
-		 (highlight-current-line-face ((t (:background "#252323"))))
+     (highlight-current-line-face ((t (:background "#252323"))))
      (font-lock-builtin-face ((t (:foreground "#86453A"))))
      (font-lock-comment-face ((t (:italic t :foreground "#333B40"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#4C565D"))))
@@ -32,6 +32,7 @@
      (highlight ((t (:background "darkolivegreen"))))
      (italic ((t (:italic t))))
      (modeline ((t (:background "#3F3B3B" :foreground "white"))))
+     (modeline-inactive ((t (:background "#3F3B3B" :foreground "grey10"))))
      (modeline-buffer-id ((t (:background "#3F3B3B" :foreground
                                           "white"))))
      (modeline-mousable ((t (:background "#a5baf1" :foreground
@@ -48,4 +49,6 @@
      (flymake-warnline ((t (:background "LightSteelBlue" :foreground
                                         "black"))))
      (underline ((t (:underline t))))
-     (minibuffer-prompt ((t (:bold t :foreground "#ff6600")))))))
+     (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
+     (hi-blue ((t (:background "#555555"))))
+     )))

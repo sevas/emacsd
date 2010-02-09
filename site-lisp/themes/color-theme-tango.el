@@ -21,6 +21,7 @@
      (border ((t (:background "#888a85"))))
      (fringe ((t (:background "grey10" :foreground "#555753"))))
      (region ((t (:background "#3e4d4d"))))
+     (highlight-current-line-face ((t (:background "#363943"))))
      (font-lock-builtin-face ((t (:foreground "#729fcf"))))
      (font-lock-comment-face ((t (:foreground "#888a85"))))
      (font-lock-constant-face ((t (:foreground "#8ae234"))))
