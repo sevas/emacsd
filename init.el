@@ -1,7 +1,7 @@
 (require 'cl)
 
 (defvar emacs-root (if (eq system-type 'windows-nt)
-		       (concat (getenv "USERPROFILE") "/AppData/Roaming/")
+		       (concat (getenv "EMACS_HOME") "/")
 		     (if (eq system-type 'gnu/linux)
 			 (concat "/home/" user-login-name "/")
 			(if (eq system-type 'darwin)
