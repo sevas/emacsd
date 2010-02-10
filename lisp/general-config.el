@@ -6,9 +6,9 @@
 
 
 ;; pabbrev
-;;(abbrev-mode (not t))
-;;(require 'pabbrev)
-;;(global-pabbrev-mode t)
+(abbrev-mode (not t))
+(require 'pabbrev)
+(global-pabbrev-mode t)
     
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
