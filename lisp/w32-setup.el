@@ -8,7 +8,6 @@
 
 ;;(load-library "themes/color-theme-tango")
 ;;(color-theme-tango)
-
 (load-library "themes/zen-and-art.el")
 (color-theme-zen-and-art)
 
@@ -25,8 +24,8 @@
 
 
 ;;darkroom
-(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/darkroom-mode"))
-(require 'martin-darkroom)
+;;(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/darkroom-mode"))
+;;(require 'martin-darkroom)
 
 
 ;; eshell prompt
