@@ -14,3 +14,19 @@
 ;;(semantic-load-enable-semantic-debugging-helpers)
 
 ;; (define-key "M-S-/" "." 'semantic-complete-self-insert)
+
+;; add commands 
+(require 'semantic-ia)
+(require 'semantic-gcc)
+
+;; add some headers
+(semantic-add-system-include "/opt/local/include/boost" 'c++-mode)
+
+
+
+(defun my-cedet-hook ()
+  (local-set-key [(control return)] 'semantic-ia-complete-symbol)
+  (local-set-key "\C-c?" 'semantic-ia-complete-symbol-menu)
+  (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
+  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
+(add-hook 'c-mode-common-hook 'my-cedet-hook)
