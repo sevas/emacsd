@@ -2,12 +2,11 @@
 (require 'color-theme)
 (color-theme-initialize)
 
-(load-library "themes/color-theme-tango")
-(color-theme-tango)
+;;(load-library "themes/color-theme-tango")
+;;(color-theme-tango)
 
-
-;; (load-library "themes/zen-and-art.el")
-;;(color-theme-zen-and-art)
+(load-library "themes/zen-and-art.el")
+(color-theme-zen-and-art)
 
 ;;(if window-system
 ;;  (color-theme-tango)
