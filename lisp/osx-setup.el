@@ -2,11 +2,15 @@
 (require 'color-theme)
 (color-theme-initialize)
 
-(load-library "themes/color-theme-tango")
+;;(load-library "themes/color-theme-tango")
+;;(color-theme-tango)
 
-(if window-system
-  (color-theme-tango)
-(color-theme-tty-dark))
+(load-library "themes/zen-and-art.el")
+(color-theme-zen-and-art)
+
+;;(if window-system
+;;  (color-theme-tango)
+;;(color-theme-tty-dark))
 
 ;;(if (not window-system)
 ;;    (color-theme-tty-dark))

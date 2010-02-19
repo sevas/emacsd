@@ -21,6 +21,7 @@
      (border ((t (:background "#888a85"))))
      (fringe ((t (:background "grey10" :foreground "#555753"))))
      (region ((t (:background "#3e4d4d"))))
+     (highlight-current-line-face ((t (:background "#363943"))))
      (font-lock-builtin-face ((t (:foreground "#729fcf"))))
      (font-lock-comment-face ((t (:foreground "#888a85"))))
      (font-lock-constant-face ((t (:foreground "#8ae234"))))
@@ -47,6 +48,7 @@
      (mode-line          ((t (:background "grey10" :foreground "#ccccca"))))
      (mode-line-inactive ((t (:background "grey10" :foreground "#2e3436"))))
      (mode-line-buffer-id ((t (:bold t :foreground "#729fcf"))))
+     
      (completions-first-difference ((t (:foreground "#729fcf"))))
      (eshell-prompt ((t (:bold t :foreground "#729fcf"))))
      (erc-default-face ((t (nil))))

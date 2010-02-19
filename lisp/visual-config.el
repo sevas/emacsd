@@ -66,13 +66,13 @@
 (require 'highlight-current-line)
 ;;(highlight-current-line-set-bg-color
 ;; (plist-get (custom-face-attributes-get 'fringe nil) :foreground))
-(highlight-current-line-set-bg-color "#363943")
+;;(highlight-current-line-set-bg-color "#363943")
 (highlight-current-line-minor-mode t)
 
 
 ;; highlight occurences of selected symbol
 (load-library "light-symbol")
-(light-symbol-mode)
+(light-symbol-mode t)
 
 
 ;; autocomplete (, {, [

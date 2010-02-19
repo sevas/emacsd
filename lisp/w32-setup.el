@@ -6,8 +6,10 @@
 ;;(color-theme-vibrant-ink-win)
 
 
-(load-library "themes/color-theme-tango")
-(color-theme-tango)
+;;(load-library "themes/color-theme-tango")
+;;(color-theme-tango)
+(load-library "themes/zen-and-art.el")
+(color-theme-zen-and-art)
 
 ;; machine dependent shit (currently, only the font)
 (load-library "local-settings")
@@ -22,8 +24,8 @@
 
 
 ;;darkroom
-(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/darkroom-mode"))
-(require 'martin-darkroom)
+;;(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/darkroom-mode"))
+;;(require 'martin-darkroom)
 
 
 ;; eshell prompt

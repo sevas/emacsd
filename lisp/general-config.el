@@ -4,11 +4,14 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+;; tab = 4 spaces 
+(setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)
 
 ;; pabbrev
 ;;(abbrev-mode (not t))
-;;(require 'pabbrev)
-;;(global-pabbrev-mode t)
+(require 'pabbrev)
+(global-pabbrev-mode t)
     
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
