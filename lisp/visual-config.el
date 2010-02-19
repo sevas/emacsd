@@ -43,7 +43,7 @@
 
 ;; color/line numbers
 (setq column-number-mode t
-      line-number-mode t))
+      line-number-mode t)
 
 ;; disable sound
 ;; (setq visible-bell t)

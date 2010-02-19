@@ -69,3 +69,9 @@
 (add-to-list 'auto-mode-alist '("\\.layout\\'" . xml-mode ))
 ;; Qt layouts
 (add-to-list 'auto-mode-alist '("\\.ui\\'" . xml-mode ))
+
+
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . javascript-mode))
+(autoload 'javascript-mode "javascript" nil t)
