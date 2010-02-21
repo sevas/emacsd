@@ -71,6 +71,12 @@
 (add-to-list 'auto-mode-alist '("\\.ui\\'" . xml-mode ))
 
 
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . javascript-mode))
+(autoload 'javascript-mode "javascript" nil t)
+
+
 ;; ogre material
 (setq load-path (cons "~/.emacs.d/ogre-material-mode" load-path))
 (require 'ogre-material-mode)
