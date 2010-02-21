@@ -69,3 +69,8 @@
 (add-to-list 'auto-mode-alist '("\\.layout\\'" . xml-mode ))
 ;; Qt layouts
 (add-to-list 'auto-mode-alist '("\\.ui\\'" . xml-mode ))
+
+
+;; ogre material
+(setq load-path (cons "~/.emacs.d/ogre-material-mode" load-path))
+(require 'ogre-material-mode)
