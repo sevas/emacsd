@@ -62,6 +62,8 @@
 (add-to-list 'auto-mode-alist '("\\.vs\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.fs\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.gs\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.pix\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.vrt\\'" . glsl-mode))
 
 ;; file/mode associations
 
