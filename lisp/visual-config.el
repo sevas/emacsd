@@ -86,3 +86,7 @@
 
 ;; No 'yes or no' question, only 'y or n'
 (fset 'yes-or-no-p 'y-or-n-p)
+
+
+;; window management
+(winner-mode 1)
