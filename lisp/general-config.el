@@ -130,3 +130,36 @@
 ;;    (set-cursor-color djcb-normal-color)
 ;;    (setq cursor-type djcb-normal-cursor-type))))
 ;;(add-hook 'post-command-hook 'djcb-set-cursor-according-to-mode)
+
+
+;; desktop mode
+;; load saved desktop on startup and save buffers to desktop on exit
+(load "desktop")
+(desktop-save-mode 1)
+(desktop-read)
+(setq desktop-load-locked-desktop t)
+
+;; save a bunch of variables to the desktop file
+;; for lists specify the len of the maximal saved data also
+(setq desktop-globals-to-save
+      (append '((extended-command-history . 30)
+                (file-name-history        . 100)
+                (grep-history             . 30)
+                (compile-history          . 30)
+                (minibuffer-history       . 50)
+                (query-replace-history    . 60)
+                (read-expression-history  . 60)
+                (regexp-history           . 60)
+                (regexp-search-ring       . 20)
+                (search-ring              . 20)
+                (shell-command-history    . 50)
+                tags-file-name
+                register-alist)))
+
+;; save our place when closing a file
+(require 'saveplace)
+(setq-default save-place t)
+
+;; always revert buffers if their files change on disk to reflect new changes
+(global-auto-revert-mode 1)
+
