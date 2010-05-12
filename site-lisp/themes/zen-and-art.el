@@ -16,8 +16,6 @@
      (fringe ((t (:background "#252323"))))
      (highlight-current-line-face ((t (:background "#252323"))))
      (font-lock-builtin-face ((t (:foreground "#86453A"))))
-     ;;(font-lock-comment-face ((t (:italic t :foreground "#A0A798"))))
-     ;;(font-lock-comment-face ((t (:italic t :foreground "#B0B8A7"))))
      (font-lock-comment-face ((t (:italic t :foreground "#4C565D"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#4C565D"))))
      (font-lock-constant-face ((t (:foreground "#86453A"))))
@@ -52,5 +50,6 @@
                                         "black"))))
      (underline ((t (:underline t))))
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
-     (hi-blue ((t (:background "#555555"))))
+     (hi-blue ((t (:background "#555555" ))))
+     
      )))

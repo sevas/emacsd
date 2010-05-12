@@ -73,7 +73,7 @@
 
 ;; highlight occurences of selected symbol
 (load-library "light-symbol")
-(light-symbol-mode)
+(light-symbol-mode t)
 
 
 ;; autocomplete (, {, [
