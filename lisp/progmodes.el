@@ -99,3 +99,14 @@
 (autoload 'processing-mode "processing-mode" "Processing mode" t)
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
 (setq processing-location (concat (getenv "PROCESSING_HOME") "\\"))
+
+
+
+;; slime
+(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-2010-06-10/"))  ; your SLIME directory
+(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+(require 'slime)
+(slime-setup)
+
+
+;; clojure
