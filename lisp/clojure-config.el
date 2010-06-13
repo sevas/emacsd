@@ -15,7 +15,7 @@
     ;;  (list (expand-file-name "~/.clojure/clojure-contrib.jar")))
 
 
-(setq swank-clojure-jar-path (expand-file-name "~/.swank-clojure/swank-clojure-1.0.jar")
+(setq swank-clojure-jar-path (expand-file-name "~/.swank-clojure/swank-clojure-1.1.0.jar")
       swank-clojure-jar-home (expand-file-name "~/.swank-clojure/")
       swank-clojure-classpath (list "~/.swank-clojure/*")) 
 

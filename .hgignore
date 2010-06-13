@@ -2,3 +2,9 @@ syntax: glob
 
 *.elc
 *~
+.DS_Store
+.emacs.desktop
+local-settings.el
+y
+yes
+*.pub
