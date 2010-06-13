@@ -31,8 +31,15 @@
 
 
 ;; ido
-(require 'ido) 
-(ido-mode t)
+(when (> emacs-major-version 21)
+  (require 'ido)
+  (ido-mode t)
+  (setq ido-enable-prefix nil
+        ido-enable-flex-matching t
+        ido-create-new-buffer 'always
+        ido-use-filename-at-point 'guess
+        ido-max-prospects 10))
+
 
 ;; cursor-chg
 ;;(require 'cursor-chg)  ; Load the library
@@ -162,4 +169,23 @@
 
 ;; always revert buffers if their files change on disk to reflect new changes
 (global-auto-revert-mode 1)
+
+
+;; Save a list of recent files visited.
+(recentf-mode 1)
+
+;; 80 col, no alternative
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+;; Don't clutter up directories with files~
+(setq backup-directory-alist `(("." . ,(expand-file-name
+                                        (concat emacs-root "backups")))))
+
+
+;; slime
+(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-20100404"))  ; your SLIME directory
+(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-repl-20100404"))
+;;(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+;;(require 'slime)
+;;(slime-setup)
 

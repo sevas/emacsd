@@ -15,7 +15,7 @@
 
   (add-path ".emacs.d/lisp") ;; personnal elisp code
   (add-path ".emacs.d/site-lisp") ;; elisp from the interwub
-  (add-path ".emacs.d/site-lisp/haskell-mode-2.4"))
+  )
 
 
 
@@ -49,3 +49,14 @@
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
 )
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))

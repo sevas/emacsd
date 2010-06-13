@@ -5,6 +5,7 @@
 (load-library "cc-config")
 (load-library "haskell-config")
 (load-library "python-config")
+(load-library "clojure-config")
 
 
 ;; go-language support
@@ -22,7 +23,6 @@
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . latex-mode))
 
-
 ;; bat mode
 (setq auto-mode-alist 
 	(append 
@@ -38,7 +38,6 @@
 
 ;;graphviz
 (load-library "graphviz-dot-mode") 
-
 
 
 ;; reStructuredText
@@ -75,7 +74,7 @@
 (add-to-list 'auto-mode-alist '("\\.ui\\'" . xml-mode ))
 
 
-
+;; js
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . javascript-mode))
 (autoload 'javascript-mode "javascript" nil t)
@@ -102,11 +101,8 @@
 
 
 
-;; slime
-(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-2010-06-10/"))  ; your SLIME directory
-(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
-(require 'slime)
-(slime-setup)
 
-
-;; clojure
+;; some more assoc
+(add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . diff-mode))
+(add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))

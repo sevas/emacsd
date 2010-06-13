@@ -15,5 +15,5 @@
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
 
 (setq auto-mode-alist (cons '("\\.rb\\'" . ruby-mode) auto-mode-alist))
-
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 

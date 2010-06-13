@@ -39,12 +39,9 @@
 ;;(global-set-key "\C-xpl" 'load-ropemacs)
 
 
-;; ;; python failed tab completion
-;; (require 'pycomplete)
-
 ;; ipython 
-;; (setq ipython-command "ipython")
-;; (require 'ipython)
+(setq ipython-command "ipython")
+(require 'ipython)
 
 ;; growable miniconsole for python backtraces
 (setq resize-mini-windows t
@@ -105,3 +102,6 @@
 ;;                '("\\.py\\'" flymake-pylint-init)))
 
 
+
+
+(add-hook 'python-mode-hook '(lambda () (require 'virtualenv)))
