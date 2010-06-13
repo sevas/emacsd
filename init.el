@@ -28,6 +28,13 @@
      (if (eq system-type 'darwin)
        (load-library "osx-setup"))))
 
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
+
+
+
 ;; some global configuration
 (load-library "visual-config")
 
@@ -51,12 +58,3 @@
 )
 
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))

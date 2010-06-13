@@ -1,3 +1,7 @@
+;;slime
+(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-frozen"))
+(require 'slime)
+
 ;;;; clojure
 (require 'clojure-mode)
 ;;(autoload 'clojure-test-mode "clojure-test-mode" "Clojure test mode" t)

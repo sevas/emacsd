@@ -183,9 +183,9 @@
 
 
 ;; slime
-(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-20100404"))  ; your SLIME directory
-(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-repl-20100404"))
-;;(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
-;;(require 'slime)
-;;(slime-setup)
+;;(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-20100404"))  ; your SLIME directory
+;;(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-repl-20100404"))
+;;;;(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+;;;;(require 'slime)
+;;;;(slime-setup)
 
