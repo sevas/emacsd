@@ -182,6 +182,11 @@
                                         (concat emacs-root "backups")))))
 
 
+;;slime
+(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-frozen"))
+(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-frozen/contrib"))
+(require 'slime)
+
 ;; slime
 ;;(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-20100404"))  ; your SLIME directory
 ;;(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-repl-20100404"))

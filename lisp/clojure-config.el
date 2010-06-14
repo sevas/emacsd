@@ -1,6 +1,5 @@
-;;slime
-(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-frozen"))
-(require 'slime)
+(require 'slime-autoloads) 
+(slime-setup '(slime-fancy))
 
 ;;;; clojure
 (require 'clojure-mode)
@@ -29,3 +28,7 @@
 
 (require 'assoc)
 (aput 'slime-lisp-implementations 'clojure (list (swank-clojure-cmd) :init 'swank-clojure-init ))
+
+
+
+ 

@@ -73,12 +73,12 @@
 
 ;; highlight occurences of selected symbol
 (load-library "light-symbol")
-(light-symbol-mode t)
+(light-symbol-mode)
 
 
 ;; autocomplete (, {, [
-(require 'pair-mode)
-(pair-mode t)
+;;(require 'pair-mode)
+;;(pair-mode t)
 
 ;; better i-search highlight
 (require 'ishl)
