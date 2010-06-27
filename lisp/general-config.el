@@ -1,3 +1,4 @@
+(require 'funcs)
 (setq inhibit-splash-screen t)
 
 ;; wtf ?
@@ -10,17 +11,20 @@
 
 ;; pabbrev
 ;;(abbrev-mode (not t))
-(require 'pabbrev)
-(global-pabbrev-mode t)
+;;(require 'pabbrev)
+;;(global-pabbrev-mode t)
     
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
 (require 'ahg)
 
 ;; snippets
+(load-from-site-lisp "yasnippet-0.5.9")
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/site-lisp/snippets")
+(yas/load-directory "~/.emacs.d/site-lisp/yasnippet-0.5.9/snippets")
+
+
 
 ;; S-<arrows> to switch buffers
 (windmove-default-keybindings)
@@ -111,34 +115,6 @@
 ;;(global-set-key "^Ca" (quote select-buffer))
 
 
-;;;; from http://emacs-fu.blogspot.com/2009/12/changing-cursor-color-and-shape.html
-;;;; Change cursor color according to mode; inspired by
-;;;; http://www.emacswiki.org/emacs/ChangingCursorDynamically
-;;(setq djcb-read-only-color       "gray")
-;;;; valid values are t, nil, box, hollow, bar, (bar . WIDTH), hbar,
-;;;; (hbar. HEIGHT); see the docs for set-cursor-type
-;; 
-;;(setq djcb-read-only-cursor-type 'hbar)
-;;(setq djcb-overwrite-color       "red")
-;;(setq djcb-overwrite-cursor-type 'box)
-;;(setq djcb-normal-color          "yellow")
-;;(setq djcb-normal-cursor-type    'bar)
-;; 
-;;(defun djcb-set-cursor-according-to-mode ()
-;;  "change cursor color and type according to some minor modes."
-;;  (cond
-;;   (buffer-read-only
-;;    (set-cursor-color djcb-read-only-color)
-;;    (setq cursor-type djcb-read-only-cursor-type))
-;;   (overwrite-mode
-;;    (set-cursor-color djcb-overwrite-color)
-;;    (setq cursor-type djcb-overwrite-cursor-type))
-;;   (t
-;;    (set-cursor-color djcb-normal-color)
-;;    (setq cursor-type djcb-normal-cursor-type))))
-;;(add-hook 'post-command-hook 'djcb-set-cursor-according-to-mode)
-
-
 ;; desktop mode
 ;; load saved desktop on startup and save buffers to desktop on exit
 (load "desktop")
@@ -183,14 +159,13 @@
 
 
 ;;slime
-(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-frozen"))
-(add-to-list 'load-path (concat emacs-root ".emacs.d/site-lisp/slime-frozen/contrib"))
+(load-from-site-lisp "slime-frozen")
+(load-from-site-lisp "slime-frozen/contrib")
 (require 'slime)
 
-;; slime
-;;(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-20100404"))  ; your SLIME directory
-;;(add-to-list 'load-path (concat emacs-root ".emacs.d/elpa/slime-repl-20100404"))
-;;;;(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
-;;;;(require 'slime)
-;;;;(slime-setup)
 
+(load-from-site-lisp "auto-complete-1.3")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dicts")
+(ac-config-default)
+ 
