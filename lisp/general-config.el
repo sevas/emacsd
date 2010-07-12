@@ -166,6 +166,7 @@
 
 (load-from-site-lisp "auto-complete-1.3")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dicts")
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dicts")
+(ac-common-setup)
 (ac-config-default)
  

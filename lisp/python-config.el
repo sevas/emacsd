@@ -24,24 +24,33 @@
             (smart-operator-mode-on)
             ))
 
-;; Initialize Pymacs
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-;; Initialize Rope  
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+;;;; Initialize Pymacs
+;;(autoload 'pymacs-apply "pymacs")
+;;(autoload 'pymacs-call "pymacs")
+;;(autoload 'pymacs-eval "pymacs" nil t)
+;;(autoload 'pymacs-exec "pymacs" nil t)
+;;(autoload 'pymacs-load "pymacs" nil t)
+;;;; Initialize Rope  
+;;(pymacs-load "ropemacs" "rope-")
+;;(setq ropemacs-enable-autoimport t)
 
 (add-hook 'python-mode-hook
           (lambda ()
-            (auto-complete-mode 1)))
-          
-          
+;;            (auto-complete-mode 1)
+;;            (ac-common-setup)
+            (ac-ropemacs-initialize)
+;;            (setq ac-auto-start 1) 
+             
+             ))
 
-(ac-ropemacs-initialize)
-(setq ac-auto-start 1) 
+
+
+
+(require 'ipython)
+(setq python-python-command "ipython")
+(setq py-python-command-args '( "-colors" "Linux" "-cl"))
+;;(setq py-python-command-args '(""))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;           
 ;;; Auto-completion 
@@ -61,16 +70,16 @@
 ;;     . (lambda ()
 ;;         (prefix-list-elements (rope-completions) ac-target))))
 ;;  "Source for Rope")
-
-(defun ac-python-find ()
-  "Python `ac-find-function'."
-  (require 'thingatpt)
-  (let ((symbol (car-safe (bounds-of-thing-at-point 'symbol))))
-    (if (null symbol)
-        (if (string= "." (buffer-substring (- (point) 1) (point)))
-            (point)
-          nil)
-      symbol)))
+;; 
+;;(defun ac-python-find ()
+;;  "Python `ac-find-function'."
+;;  (require 'thingatpt)
+;;  (let ((symbol (car-safe (bounds-of-thing-at-point 'symbol))))
+;;    (if (null symbol)
+;;        (if (string= "." (buffer-substring (- (point) 1) (point)))
+;;            (point)
+;;          nil)
+;;      symbol)))
 
 ;; (defun ac-python-candidate ()
 ;;   "Python `ac-candidates-function'"
@@ -184,3 +193,25 @@
 
 
 ;;(add-hook 'python-mode-hook '(lambda () (require 'virtualenv)))
+
+
+(defun pyflakes-thisfile () (interactive)
+       (compile (format "pyflakes %s" (buffer-file-name)))
+)
+
+(define-minor-mode pyflakes-mode
+    "Toggle pyflakes mode.
+    With no argument, this command toggles the mode.
+    Non-null prefix argument turns on the mode.
+    Null prefix argument turns off the mode."
+    ;; The initial value.
+    nil
+    ;; The indicator for the mode line.
+    " Pyflakes"
+    ;; The minor mode bindings.
+    '( ([f5] . pyflakes-thisfile) )
+)
+
+(add-hook 'python-mode-hook (lambda () (pyflakes-mode t)))
+(require 'cython-mode)
+(add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))

@@ -1,3 +1,9 @@
+(setenv "PATH"
+        (concat "/Library/Frameworks/Python.framework/Versions/Current/bin:"
+                (getenv "PATH")))
+(setenv "PYTHONPATH"
+        "/Library/Frameworks/Python.framework/Versions/Current/")
+
 ;; color theme
 (require 'color-theme)
 (color-theme-initialize)
