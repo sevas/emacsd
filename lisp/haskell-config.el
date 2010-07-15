@@ -1,4 +1,4 @@
-(add-to-list 'load-path ".emacs.d/site-lisp/haskell-mode-2.7.0")
+(load-from-site-lisp "haskell-mode-2.7.0")
 (require 'haskell-mode)
 (setq haskell-program-name "/usr/bin/ghci")
 
