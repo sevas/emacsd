@@ -44,7 +44,7 @@
   
   (setq c-offsets-alist '((innamespace . 0)		;; Don't indent for namespace
                           (defun-block-intro . +)	;; Do indent for functions
-                          (statement-block-intro . +)	;; Do indent for statement
+                          (statement-block-intro . 0)	;; Do indent for statement
 														;; blocks
                           (statement . 0)		;; Don't indent on individual
 												;; statements

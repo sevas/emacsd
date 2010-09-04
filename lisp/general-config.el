@@ -117,10 +117,10 @@
 
 ;; desktop mode
 ;; load saved desktop on startup and save buffers to desktop on exit
-(load "desktop")
-(desktop-save-mode 1)
-(desktop-read)
-(setq desktop-load-locked-desktop t)
+;;(load "desktop")
+;;(desktop-save-mode 1)
+;;(desktop-read)
+;;(setq desktop-load-locked-desktop t)
 
 ;; save a bunch of variables to the desktop file
 ;; for lists specify the len of the maximal saved data also
