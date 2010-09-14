@@ -6,7 +6,7 @@
 ;;(require 'auto-complete)
 ;;(require 'yasnippet)
 
-(require 'smart-operator)
+;;(require 'smart-operator)
 
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
@@ -21,7 +21,7 @@
             (define-key py-mode-map (kbd "RET") 'newline-and-indent)
             ;(define-key py-mode-map [tab] 'yas/expand)
             ;(setq yas/after-exit-snippet-hook 'indent-according-to-mode)
-            (smart-operator-mode-on)
+            ;;(smart-operator-mode-on)
             ))
 
 ;;;; Initialize Pymacs
