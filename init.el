@@ -33,7 +33,8 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-
+;; load helper functions
+(load-library "funcs")
 
 ;; some global configuration
 (load-library "visual-config")
@@ -41,8 +42,7 @@
 ;;  extensions
 (load-library "general-config")
 
-;; load helper functions
-(load-library "funcs")
+
 
 ;; load progmodes & file associations
 (load-library "progmodes")
@@ -56,5 +56,3 @@
  '(frame-background-mode (quote dark))
  '(haskell-font-lock-symbols (quote unicode))
 )
-
-

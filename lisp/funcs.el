@@ -23,7 +23,12 @@
   (set-buffer-file-coding-system 'undecided-dos))
 
 
+(defun prepend-to-path (path)
+  (setq load-path (cons (concat emacs-root path) load-path)))
 
+
+(defun load-from-site-lisp (name)
+  (prepend-to-path (concat ".emacs.d/site-lisp/" name)))
 
 ;;; First version; has bugs!
 ;;(defun count-words-region (beginning end)
@@ -89,3 +94,6 @@
           "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla "
           "pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "
           "culpa qui officia deserunt mollit anim id est laborum."))
+
+
+(provide 'funcs)

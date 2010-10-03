@@ -28,7 +28,7 @@
      (font-lock-type-face ((t (:italic t :foreground "#C6B032"))))
      (font-lock-variable-name-face ((t (:foreground "#46657B"))))
      (font-lock-warning-face ((t (:bold t :foreground "Pink"))))
-     (paren-face-match-light ((t (:background "#252323"))))
+     ;;(paren-face-match-light ((t (:background "#252323"))))
      (highlight ((t (:background "darkolivegreen"))))
      (italic ((t (:italic t))))
      (modeline ((t (:background "#3F3B3B" :foreground "white"))))
@@ -51,5 +51,17 @@
      (underline ((t (:underline t))))
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600"))))
      (hi-blue ((t (:background "#555555" ))))
-     
+     (show-paren-match ((t (:bold t :background "cyan"  :foreground "#141414"))))
+     (show-paren-mismatch ((t (:bold t :background "red" :foreground "#D2DEC4"))))
+     ;; erc
+     (erc-default-face ((t (nil))))
+     (erc-bold-face ((t (:bold t :weight bold))))
+     (erc-error-face ((t (:bold t :foreground "#AE5825"))))
+     (erc-input-face ((t (:foreground "#729fcf"))))
+     (erc-direct-msg-face ((t (:foreground "#C6B032" :bold t))))
+     (erc-highlight-face ((t (:foreground "#2e3436" :background "#e9b96e"))))
+     (erc-notice-face ((t (:foreground "#ad7fa8" :italic t))))
+     (erc-prompt-face ((t (:bold t :foreground "#D2DEC4" :background "#46657B"))))
+     (erc-timestamp-face ((t (:bold t :foreground "#46657B"))))
+
      )))

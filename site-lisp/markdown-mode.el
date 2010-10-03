@@ -350,7 +350,7 @@ This will not take effect until Emacs is restarted."
   :type 'boolean)
 
 (defcustom markdown-css-path nil
-  "CSS file to include in the output XHTML"
+  "CSS file to include in the output XHTML."
   :group 'markdown
   :type 'string)
 
@@ -628,7 +628,7 @@ This will not take effect until Emacs is restarted."
 
 ; From html-helper-mode
 (defun markdown-match-comments (last)
-  "Matches HTML comments from the point to LAST"
+  "Match HTML comments from the point to LAST."
   (cond ((search-forward "<!--" last t)
          (backward-char 4)
          (let ((beg (point)))
@@ -1418,9 +1418,8 @@ This is an exact copy of `line-number-at-pos' for use in emacs21."
       (1+ (count-lines start (point))))))
 
 (defun markdown-nobreak-p ()
-  "Returns nil if it is ok for fill-paragraph to insert a line
-  break at point"
-  ;; are we inside in square brackets
+  "Return nil if it is acceptable to break the current line at the point."
+  ;; inside in square brackets (e.g., link anchor text)
   (looking-back "\\[[^]]*"))
 
 
@@ -1432,6 +1431,7 @@ This is an exact copy of `line-number-at-pos' for use in emacs21."
   (interactive)
   (message "markdown-mode, version %s" markdown-mode-version))
 
+;;;###autoload
 (define-derived-mode markdown-mode text-mode "Markdown"
   "Major mode for editing Markdown files."
   ;; Comments

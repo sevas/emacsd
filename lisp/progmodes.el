@@ -10,6 +10,10 @@
 
 ;; go-language support
 (require 'go-mode-load)
+(setenv "PATH"
+        (concat (getenv "HOME") "/bin:"
+                (getenv "PATH")))
+
 
 ;; cmake support
 (require 'cmake-mode)
