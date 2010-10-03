@@ -36,12 +36,12 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
-;;            (auto-complete-mode 1)
-;;            (ac-common-setup)
+            ;;(auto-complete-mode 1)
+            (ac-common-setup)
             (ac-ropemacs-initialize)
-;;            (setq ac-auto-start 1) 
-             
-             ))
+            ;;(setq ac-auto-start 1) 
+            (setq ropemacs-enable-autoimport t)
+            ))
 
 
 
