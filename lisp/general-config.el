@@ -44,15 +44,6 @@
         ido-use-filename-at-point 'guess
         ido-max-prospects 10))
 
-
-;; cursor-chg
-;;(require 'cursor-chg)  ; Load the library
-;;(toggle-cursor-type-when-idle 1) ; Turn on cursor change when Emacs is idle
-;;(change-cursor-mode 1) ; Turn on change for overwrite, read-only, and input mode
-
-;; quicksilver for emacs
-;;(require 'anything)
-
 ;; show whitespaces and tabs
 ;;(require 'blank-mode)
 
@@ -72,55 +63,12 @@
 ;; MS Windows clipboard is UTF-16LE 
 (set-clipboard-coding-system 'utf-16le-dos)
 
-
-;; org-mode
-;;(setq load-path (cons "~/.emacs.d/site-lisp/org-mode/lisp" load-path))
-;;(require 'org)
-;;(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-;;(define-key global-map "\C-cl" 'org-store-link)1
-;;(define-key global-map "\C-ca" 'org-agenda)
-
-
-
-;; Change cursor color according to mode
-;; (defvar hcz-set-cursor-color-color "")
-;; (defvar hcz-set-cursor-color-buffer "")
-;; (defun hcz-set-cursor-color-according-to-mode ()
-;;   "change cursor color according to some minor modes."
-;;   ;; set-cursor-color is somewhat costly, so we only call it when needed:
-;;   (let ((color
-;; 	 (if buffer-read-only "white"
-;; 	   (if overwrite-mode "red"
-;; 	     "yellow"))))
-;;     (unless (and
-;; 	     (string= color hcz-set-cursor-color-color)
-;; 	     (string= (buffer-name) hcz-set-cursor-color-buffer))
-;;       (set-cursor-color (setq hcz-set-cursor-color-color color))
-;;       (setq hcz-set-cursor-color-buffer (buffer-name)))))
-;; (add-hook 'post-command-hook 'hcz-set-cursor-color-according-to-mode)
-
-;; icicles
-;; (setq load-path (cons "~/.emacs.d/site-lisp/icicles" load-path))
-;; (require 'icicles)
-;; (eval-after-load "icomplete" '(progn (require 'icomplete+)))
-;; (require 'icomplete)
-;; (require 'icomplete+)
-
-
 (require 'browse-kill-ring)
 
 ;; select whole buffer
 ;;(fset 'select-buffer
 ;;   [?\C-a ?\M-])
 ;;(global-set-key "^Ca" (quote select-buffer))
-
-
-;; desktop mode
-;; load saved desktop on startup and save buffers to desktop on exit
-;;(load "desktop")
-;;(desktop-save-mode 1)
-;;(desktop-read)
-;;(setq desktop-load-locked-desktop t)
 
 ;; save a bunch of variables to the desktop file
 ;; for lists specify the len of the maximal saved data also
