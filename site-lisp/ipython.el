@@ -255,8 +255,8 @@ buffer already exists."
   "HACK: if `py-shell' is not active or ASYNC is explicitly desired, fall back
   to python instead of ipython." 
   (let ((py-which-shell (if (and (comint-check-proc "*Python*") (not async))
-			    py-python-command
-			  ipython-backup-of-py-python-command)))
+                            py-python-command
+                          ipython-backup-of-py-python-command)))
     ad-do-it))
 (ad-activate 'py-execute-region)
 
@@ -477,7 +477,7 @@ matches last process output."
            (add-hook 'comint-output-filter-functions
                      'ipython-indentation-hook)))
 
-(define-key py-shell-map (kbd "RET") 'ipython-send-and-indent)
+;;(define-key py-shell-map (kbd "RET") 'ipython-send-and-indent)
 ;;; / end autoindent support
 
 (provide 'ipython)
