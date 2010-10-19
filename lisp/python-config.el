@@ -7,35 +7,38 @@
 
 
 ;;;; iypthon
-;;(require 'ipython)
-;;(setq python-python-command "ipython")
-;;(setq py-python-command-args '( "-colors" "Linux" "-cl"))
-;;;;(setq py-python-command-args '(""))
+(require 'ipython)
+(setq python-python-command "ipython")
+(setq py-python-command-args '( "-colors" "Linux" "-cl"))
 
-
-
-(require 'python-mode)
 (add-hook 'python-mode-hook
           (lambda ()
-            (set-variable 'py-indent-offset 4)
+            ;; deactivate guessed settings for indentation
             (set-variable 'py-smart-indentation nil)
+            ;; tab = 4 spaces
+            (set-variable 'py-indent-offset 4) 
+            ;; never use tabs to indent
             (set-variable 'indent-tabs-mode nil)
+            ;; indent when starting a new line
             (define-key py-mode-map (kbd "RET") 'newline-and-indent)
+            ;; tab key to expand yasnippet
             (define-key py-mode-map [tab] 'yas/expand)
+            ;; self explanatory
             (setq yas/after-exit-snippet-hook 'indent-according-to-mode)
             ))
 
-(load-from-site-lisp "Pymacs-0.24-beta1")
-;; Initialize Pymacs
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-;; Initialize Rope  
-(setq ropemacs-enable-autoimport t)
-(setq ropemacs-autoimport-modules '("os", "sys", "math"))
-(pymacs-load "ropemacs" "rope-")
+;; TODO : fix pymacs/ropemacs. This thing is a shame.
+; (load-from-site-lisp "Pymacs-0.24-beta1")
+; ;; Initialize Pymacs
+; (autoload 'pymacs-apply "pymacs")
+; (autoload 'pymacs-call "pymacs")
+; (autoload 'pymacs-eval "pymacs" nil t)
+; (autoload 'pymacs-exec "pymacs" nil t)
+; (autoload 'pymacs-load "pymacs" nil t)
+; ;; Initialize Rope  
+; (setq ropemacs-enable-autoimport t)
+; (setq ropemacs-autoimport-modules '("os", "sys", "math"))
+; (pymacs-load "ropemacs" "rope-")
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;           
@@ -143,11 +146,11 @@
 ;;\\([-a-zA-Z0-9_/.:\\]*\\|<string>\\)(\\([0-9]+\\))\\([a-zA-Z0-9_]*\\|\\?\\)()\\(->[^\n]*\\)?\n")
 
 
-
+;; virtualenv
 ;;(add-hook 'python-mode-hook '(lambda () (require 'virtualenv)))
 
 
-;;Pyflakes
+;; Pyflakes : static checking for python files. Mapped to F5.
 (defun pyflakes-thisfile () 
     (interactive
         (compile (format "pyflakes %s" (buffer-file-name)))))
@@ -168,5 +171,5 @@
 
 
 ;; Cython mode
-;;(require 'cython-mode)
-;;(add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
+(require 'cython-mode)
+(add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
