@@ -1,3 +1,0 @@
-#name : printf("...", ...);
-# --
-printf("${fmt}", ${var});
