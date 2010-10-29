@@ -9,20 +9,18 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
-;; pabbrev
-;;(abbrev-mode (not t))
-;;(require 'pabbrev)
-;;(global-pabbrev-mode t)
-    
+
 ;; mercurial
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
 (require 'ahg)
 
 ;; snippets
-(load-from-site-lisp "yasnippet-0.5.9")
+(load-from-site-lisp "yasnippet-0.7.0")
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/site-lisp/yasnippet-0.5.9/snippets")
+(yas/load-directory "~/.emacs.d/site-lisp/yasnippet-0.7.0/snippets")
+(require 'dropdown-list)
+(setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt))
 
 
 
@@ -44,8 +42,6 @@
         ido-use-filename-at-point 'guess
         ido-max-prospects 10))
 
-;; show whitespaces and tabs
-;;(require 'blank-mode)
 
 
 ;; set up unicode
@@ -114,7 +110,10 @@
 
 (load-from-site-lisp "auto-complete-1.3")
 (require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dicts")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dicts")
 (ac-common-setup)
 (ac-config-default)
  
+
+;; ibuffer by default
+(global-set-key (kbd "C-x C-b") 'ibuffer)

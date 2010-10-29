@@ -1,8 +1,13 @@
 (setenv "PATH"
         (concat "/Library/Frameworks/Python.framework/Versions/Current/bin:"
                 (getenv "PATH")))
+
 (setenv "PYTHONPATH"
-        "/Library/Frameworks/Python.framework/Versions/Current/")
+        (concat 
+         "/Library/Frameworks/Python.framework/Versions/Current/"
+         (concat emacs-root "/.emacs.d/python-libs")))
+
+
 
 ;; color theme
 (require 'color-theme)
@@ -11,13 +16,8 @@
 (load-library "themes/zen-and-art.el")
 (color-theme-zen-and-art)
 
-;;(if window-system
-;;  (color-theme-tango)
-;;(color-theme-tty-dark))
 
-;;(if (not window-system)
-;;    (color-theme-tty-dark))
-
+;; load some fonts
 (load-library "local-settings")
 
 

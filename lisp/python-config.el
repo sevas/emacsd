@@ -27,6 +27,40 @@
             (setq yas/after-exit-snippet-hook 'indent-according-to-mode)
             ))
 
+
+
+(defun setup-ropemacs ()
+  "Setup the ropemacs harness"
+  (setenv "PYTHONPATH"
+          (concat
+           (getenv "PYTHONPATH") ":"
+           (concat epy-install-dir "rope-dist")))
+
+  ;; TODO: We need something like add-to-list?
+  (setq pymacs-load-path
+        (list
+         (concat emacs-root  ".emacs.d/python-libs/")))
+
+  (pymacs-load "ropemacs" "rope-")
+  
+  ;; Stops from erroring if there's a syntax err
+  (setq ropemacs-codeassist-maxfixes 3)
+  (setq ropemacs-guess-project t)
+  (setq ropemacs-enable-autoimport t)
+
+  ;; Adding hook to automatically open a rope project if there is one
+  ;; in the current or in the upper level directory
+  (add-hook 'python-mode-hook
+            (lambda ()
+              (cond ((file-exists-p ".ropeproject")
+                     (rope-open-project default-directory))
+                    ((file-exists-p "../.ropeproject")
+                     (rope-open-project (concat default-directory "..")))
+                    ))))
+
+
+
+
 ;; TODO : fix pymacs/ropemacs. This thing is a shame.
 ; (load-from-site-lisp "Pymacs-0.24-beta1")
 ; ;; Initialize Pymacs
@@ -135,8 +169,15 @@
 ;;      max-mini-window-height .85)
 
 ;; gud and pdb integration
-; (require 'gud)
-; (setq gud-pdb-command-name "~/pdb")
+(require 'gud)
+(setq gud-pdb-command-name "~/bin/pdb.py")
+
+(defadvice pdb (before gud-query-cmdline activate)
+  "Provide a better default command line when called interactively."
+  (interactive
+   (list (gud-query-cmdline pdb-path
+			    (file-name-nondirectory buffer-file-name)))))
+
 
 ;; pdb
 ;;(setq pdb-path 'pdb.bat'
