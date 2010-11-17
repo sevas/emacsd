@@ -1,10 +1,10 @@
 (setenv "PATH"
-        (concat "/Library/Frameworks/Python.framework/Versions/Current/bin:"
+        (concat "/Library/Frameworks/Python.framework/Versions/2.6/bin:"
                 (getenv "PATH")))
 
 (setenv "PYTHONPATH"
         (concat 
-         "/Library/Frameworks/Python.framework/Versions/Current/"
+         "/Library/Frameworks/Python.framework/Versions/2.6/"
          (concat emacs-root "/.emacs.d/python-libs")))
 
 
@@ -26,3 +26,6 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'none)
 
+;; using macpython for hg 
+(custom-set-variables
+  '(ahg-hg-command "/Library/Frameworks/Python.framework/Versions/2.6/bin/hg"))
