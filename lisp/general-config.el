@@ -14,6 +14,7 @@
 (setq load-path (cons "~/.emacs.d/ahg" load-path))
 (require 'ahg)
 
+
 ;; snippets
 (load-from-site-lisp "yasnippet-0.7.0")
 (require 'yasnippet)
