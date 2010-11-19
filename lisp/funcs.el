@@ -63,9 +63,9 @@
 
 
 ;; word count in buffer
-;;(defun wc ()
-;;  (interactive)
-;;  (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
+(defun wc ()
+  (interactive)
+ (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
 
 
 
