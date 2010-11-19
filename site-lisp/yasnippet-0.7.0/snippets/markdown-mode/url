@@ -1,0 +1,4 @@
+#name : Insert URL
+#contributor: Frederic De Groef <f.degroef@gmail.com>
+# --
+[${1:text}](${2:URL}) $0
