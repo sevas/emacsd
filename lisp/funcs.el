@@ -62,11 +62,16 @@
 ;;              "The region has %d words." count))))))
 
 
-;; word count in buffer
-(defun wc ()
-  (interactive)
- (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
 
+(defun word-count-in-buffer ()
+  (interactive)
+  (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
+
+(defalias 'wc 'word-count-in-buffer)
+
+(defun char-count-in-buffer ()
+  (interactive)
+  (message "Char count: %s" (how-many "." (point-min) (point-max))))
 
 
 
