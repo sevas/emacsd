@@ -14,5 +14,5 @@
 
 
 
-(load-library "local-settings")
+(load "local-settings" 'no-error)
 

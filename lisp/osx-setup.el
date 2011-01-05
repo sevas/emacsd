@@ -18,7 +18,7 @@
 
 
 ;; load some fonts
-(load-library "local-settings")
+(load "local-settings" 'no-error)
 
 
 ;; off with the mac keyboard madness

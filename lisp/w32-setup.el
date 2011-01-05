@@ -12,7 +12,7 @@
 (color-theme-zen-and-art)
 
 ;; machine dependent shit (currently, only the font)
-(load-library "local-settings")
+(load "local-settings" 'no-error)
 
 
 ;; icicles
