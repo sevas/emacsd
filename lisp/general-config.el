@@ -11,7 +11,8 @@
 
 
 ;; mercurial
-(setq load-path (cons "~/.emacs.d/ahg" load-path))
+;;(setq load-path (cons "~/.emacs.d/ahg" load-path))
+(load-from-site-lisp "ahg")
 (require 'ahg)
 
 

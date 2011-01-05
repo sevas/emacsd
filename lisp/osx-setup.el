@@ -28,4 +28,4 @@
 
 ;; using macpython for hg 
 (custom-set-variables
-  '(ahg-hg-command "/Library/Frameworks/Python.framework/Versions/2.6/bin/hg"))
+  '(ahg-hg-command "/usr/local/bin/hg"))
