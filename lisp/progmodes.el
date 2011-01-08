@@ -85,7 +85,6 @@
 
 
 ;; ogre material
-(setq load-path (cons "~/.emacs.d/ogre-material-mode" load-path))
 (require 'ogre-material-mode)
 
 ;; markdown-mode
