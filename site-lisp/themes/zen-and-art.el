@@ -63,5 +63,9 @@
      (erc-notice-face ((t (:foreground "#ad7fa8" :italic t))))
      (erc-prompt-face ((t (:bold t :foreground "#D2DEC4" :background "#46657B"))))
      (erc-timestamp-face ((t (:bold t :foreground "#46657B"))))
-
+     ;; compilation window
+     (compilation-error ((t (:foreground "#86453A")))) 
+     (compilation-info ((t (:foreground "#007575"))))
+     (compilation-line-number  ((t (:foreground "#46657B"))))            
+     (compilation-warning ((t (:foreground "#86453A"))))     
      )))
