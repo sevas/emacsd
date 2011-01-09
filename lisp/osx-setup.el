@@ -8,6 +8,11 @@
          (concat emacs-root "/.emacs.d/python-libs")))
 
 
+;; haskell binaries (hlint et co)
+(setenv "PATH"
+        (concat (concat (getenv "HOME") "/.cabal/bin/:")
+                (getenv "PATH")))
+
 
 ;; color theme
 (require 'color-theme)
