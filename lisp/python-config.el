@@ -214,3 +214,13 @@
 ;; Cython mode
 (require 'cython-mode)
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
+
+
+
+;; django-mode
+
+;; django templates
+(require 'django-html-mode)
+(require 'django-mode)
+(yas/load-directory (concat emacs-root ".emacs.d/site-lisp/yasnippet-0.7.0/snippets/python-mode/django-mode/"))
+(add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
