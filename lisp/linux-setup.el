@@ -5,12 +5,12 @@
 ;;(load-library "themes/vibrant-ink-linux")
 ;;(color-theme-vibrant-ink-linux)
 
-(load-library "themes/color-theme-tango")
+(load-library "themes/zen-and-art")
 
 (if window-system
-    (color-theme-tango))
-;;(if (not (window-system))
-;;    (color-theme-tty-dark))
+    (color-theme-zen-and-art))
+(if (not (window-system))
+    (color-theme-tty-dark))
 
 
 
