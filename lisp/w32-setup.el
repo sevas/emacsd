@@ -8,8 +8,8 @@
 
 ;;(load-library "themes/color-theme-tango")
 ;;(color-theme-tango)
-(load-library "themes/zen-and-art.el")
-(color-theme-zen-and-art)
+(load-library "themes/color-theme-solarized.el")
+(color-theme-solarized 'dark)
 
 ;; machine dependent shit (currently, only the font)
 (load "local-settings" 'no-error)
