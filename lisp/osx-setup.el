@@ -18,8 +18,8 @@
 (require 'color-theme)
 (color-theme-initialize)
 
-(load-library "themes/zen-and-art.el")
-(color-theme-zen-and-art)
+(load-library "themes/color-theme-solarized.el")
+(color-theme-solarized 'dark)
 
 
 ;; load some fonts
