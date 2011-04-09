@@ -119,3 +119,5 @@
 
 ;; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+(blink-cursor-mode)
