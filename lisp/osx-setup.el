@@ -19,8 +19,9 @@
 (color-theme-initialize)
 
 (load-library "themes/color-theme-solarized.el")
-(color-theme-solarized 'dark)
-
+(load-library "themes/zen-and-art.el")
+;;(color-theme-solarized 'dark)
+(color-theme-zen-and-art)
 
 ;; load some fonts
 (load "local-settings" 'no-error)

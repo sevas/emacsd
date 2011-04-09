@@ -57,7 +57,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (fringe ((t (:foreground ,base01 :background ,base02))))
        (header-line ((t (:foreground ,base0 :background ,base2))))
        (highlight ((t (:background ,base02))))
-       (isearch ((t (:foreground ,yellow :inverse-video t))))
+       (isearch ((t (:foreground ,blue :inverse-video t))))
        (menu ((t (:foreground ,base0 :background ,base02))))
        (minibuffer-prompt ((t (:foreground ,blue))))
        (mode-line
@@ -67,7 +67,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (mode-line-inactive
         ((t (:foreground ,base0  :background ,base02
                          :box (:line-width 1 :color ,base02)))))
-       (region ((t (:background ,base01))))
+       (region ((t (:background ,base02))))
        (secondary-selection ((t (:background ,base02))))
        (trailing-whitespace ((t (:foreground ,red :inverse-video t))))
        (vertical-border ((t (:foreground ,base0))))
@@ -115,6 +115,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (info-xref-visited ((t (:inherit info-xref :foreground ,magenta))))
        ;; misc
        (highlight-current-line-face ((t (:background ,base02))))
+       (hi-blue ((t (:background ,blue ))))
        ))))
 
 (defun color-theme-solarized-dark () (color-theme-solarized 'dark))

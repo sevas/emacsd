@@ -31,7 +31,9 @@
      ;;(paren-face-match-light ((t (:background "#252323"))))
      (highlight ((t (:background "darkolivegreen"))))
      (italic ((t (:italic t))))
-     (modeline ((t (:background "#3F3B3B" :foreground "white"))))
+     (modeline ((t (:background "#3F3B3B" :foreground "white"
+                                :box (:line-width 1 :color ,base1)
+                                ))))
      (modeline-inactive ((t (:background "#3F3B3B" :foreground "grey10"))))
      (modeline-buffer-id ((t (:background "#3F3B3B" :foreground
                                           "white"))))
