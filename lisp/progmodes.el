@@ -114,3 +114,12 @@
 (add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . diff-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
+
+
+
+;; scala
+(add-to-list 'load-path "~/.emacs.d/site-lisp/scala-mode")
+(require 'scala-mode-auto)
+(add-hook 'scala-mode-hook
+          '(lambda ()
+             (yas/minor-mode-on)))
