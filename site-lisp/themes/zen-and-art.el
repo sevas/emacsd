@@ -3,7 +3,8 @@
   (interactive)
   (color-theme-install
    '(color-theme-zen-and-art
-     ((background-color . "#141414")
+     ((background-color . "#0d0a0a")
+      ;;(background-color . "#141414")
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "#C6B032")
@@ -13,8 +14,8 @@
      (default ((t (nil))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
-     (fringe ((t (:background "#252323"))))
-     (highlight-current-line-face ((t (:background "#252323"))))
+     (fringe ((t (:background "#121010"))))
+     (highlight-current-line-face ((t (:background "#121010"))))
      (font-lock-builtin-face ((t (:foreground "#86453A"))))
      (font-lock-comment-face ((t (:italic t :foreground "#4C565D"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#4C565D"))))
@@ -31,17 +32,14 @@
      ;;(paren-face-match-light ((t (:background "#252323"))))
      (highlight ((t (:background "darkolivegreen"))))
      (italic ((t (:italic t))))
-     (modeline ((t (:background "#3F3B3B" :foreground "white"
-                                :box (:line-width 1 :color ,base1)
+     (modeline ((t (:background "#121010" :foreground "232020"
+                                
                                 ))))
-     (modeline-inactive ((t (:background "#3F3B3B" :foreground "grey10"))))
-     (modeline-buffer-id ((t (:background "#3F3B3B" :foreground
-                                          "white"))))
-     (modeline-mousable ((t (:background "#a5baf1" :foreground
-                                         "black"))))
-     (modeline-mousable-minor-mode ((t (:background
-                                        "#a5baf1" :foreground "black"))))
-     (region ((t (:background "#3B3B3F"))))
+     (modeline-inactive ((t (:background "#121010" :foreground "grey20"))))
+     (modeline-buffer-id ((t (:background "#121010" :foreground "232020"))))
+     (modeline-mousable ((t (:background "#a5baf1" :foreground "black"))))
+     (modeline-mousable-minor-mode ((t (:background "#a5baf1" :foreground "black"))))
+     (region ((t (:background "#232020"))))
      (primary-selection ((t (:background "#3B3B3F"))))
      (isearch ((t (:background "#555555"))))
      (zmacs-region ((t (:background "#555577"))))
