@@ -115,7 +115,8 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dicts")
 (ac-common-setup)
 (ac-config-default)
- 
+(auto-complete-mode)
+
 
 ;; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer)
