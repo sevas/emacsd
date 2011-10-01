@@ -116,6 +116,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        ;; misc
        (highlight-current-line-face ((t (:background ,base02))))
        (hi-blue ((t (:background ,blue ))))
+
+       (show-paren-match ((t (:bold t))))
        ))))
 
 (defun color-theme-solarized-dark () (color-theme-solarized 'dark))
