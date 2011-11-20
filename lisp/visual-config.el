@@ -90,3 +90,8 @@
 
 ;; window management
 (winner-mode 1)
+
+
+;; nyan cat
+(load-library "nyan-mode/nyan-mode")
+(nyan-mode)
